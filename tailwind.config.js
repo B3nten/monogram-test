@@ -10,6 +10,9 @@ module.exports = {
         '2xl': '1512px',
         // container size
       },
+      colors: {
+        'brand-gray': "#757575",
+      }
     },
   },
   plugins: [],

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 section {
-    @apply w-full max-w-[1512px] mx-auto px-1;
+    @apply w-full max-w-[1512px] mx-auto px-1 relative;
 }
