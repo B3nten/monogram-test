@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         'sans': ['Inter'],
       },
+      screens: {
+        '2xl': '1512px',
+        // container size
+      },
     },
   },
   plugins: [],
