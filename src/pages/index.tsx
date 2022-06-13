@@ -31,28 +31,17 @@ export default function Home() {
           </div>
         </div>
         {/* Mobile View */}
-        <div className='p-2 sm:hidden'>
-          <h1 className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
-            jamstack
-          </h1>
-          <div className="grid grid-cols-2 gap-4">
-            <div><span className='text-8xl font-black bg-[url(/assets/gradient.webp)] bg-[length:300px_200px] sm:bg-[length:500px_450px] lg:bg-[length:800px_600px] bg-right-top bg-clip-text text-transparent'> 101</span>
-              <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
-              </p>
-            </div>
-            <div className='hidden'>
-              <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
-                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
-              </div>
-              <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
-                <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
-                <div className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[662px] rounded-[5vw] 2xl:rounded-[68px] mt-[-33vw] 2xl:mt-[-500px] shrink-0 bg-white/30 backdrop-blur-2xl' />
-              </div>
-            </div>
+        <div className='p-2 mt-10 sm:hidden min-h-screen'>
+          <div className="flex flex-col items-center justify-start">
+            <h1 className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
+              jamstack
+            </h1>
+            <span className='text-8xl font-black bg-[url(/assets/gradient.webp)] bg-[length:300px_200px] sm:bg-[length:500px_450px] lg:bg-[length:800px_600px] bg-right-top bg-clip-text text-transparent'> 101</span>
+            <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
+            </p>
+            <img className='col-span-2 mx-auto mt-[2rem]' src='/assets/mouseline.svg' />
           </div>
-          <img className='col-span-2 w-[30px] mx-auto mt-[2rem]' src='/assets/mouseline.svg' />
         </div>
       </section>
 
@@ -69,15 +58,13 @@ export default function Home() {
       {/* Logo section */}
       <div className="relative bg-brand-bg mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] -z-30">
         <section>
-
           {/* display grid */}
-          <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-7xl mx-auto px-4 sm:px-10 inset-0'>
+          <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
             <div className='border-l border-white/30 border-dashed'></div>
             <div className='border-x border-white/30 border-dashed'></div>
             <div className='border-r border-white/30 border-dashed'></div>
             <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
           </div>
-
           {/* Logo grid */}
           <div className='grid grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
             <div>
@@ -100,39 +87,72 @@ export default function Home() {
 
           {/* Ball */}
           <div className='relative flex flex-col items-center pb-40'>
-            <div className='absolute w-screen bottom-0 -z-20'>
-              <img className='w-full' src='/assets/squiggly.svg' />
-              <div className='w-full bg-white h-96 -mt-2'></div>
+            <div className='absolute w-screen top-1/2 bottom-0 flex flex-col -z-10'>
+              <img src='/assets/squiggly.svg' className='w-full' />
+              <div className='bg-white basis-[110%] -mt-4'></div>
             </div>
             <h1 className='text-6xl lg:text-[133px] text-white font-black text-center'>api</h1>
             <p className='max-w-[85%] md:max-w-[730px] lg:text-2xl text-white text-center mt-10 mb-16 lg:mb-40'>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
-            <div className="relative inline-block mx-auto">
+            <div className="relative mx-auto px-4 lg:px-0">
               <img src='/assets/ball.webp' />
-              <div className='absolute -inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full blur-[128px] -translate-y-10 -translate-x-10'></div>
-              <div className='absolute inset-0 bg-white -z-10 rounded-full blur-2xl -translate-y-8 -translate-x-8'></div>
+              <div className='absolute inset-0 lg:-inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full 
+              lg:blur-[128px] blur-3xl -translate-y-5 lg:-translate-y-10 -translate-x-5 lg:-translate-x-10'></div>
+              <div className='absolute inset-2 lg:inset-0 bg-white -z-10 rounded-full blur-xl lg:blur-2xl -translate-y-4 lg:-translate-y-8 -translate-x-4 lg:-translate-x-8'></div>
             </div>
           </div>
+
         </section>
       </div>
 
       {/* Markup section */}
       <section>
-
+        <div className="hidden sm:flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-2 md:px-0">
+          <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
+            markup
+          </h1>
+          <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
+            <div>
+              <p className='md:ml-[8vw] 2xl:ml-32 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
+              </p>
+              <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' />
+            </div>
+            <div className=''>
+              <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
+                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
+              </div>
+              <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
+                <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
+                <div className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[662px] rounded-[5vw] 2xl:rounded-[68px] mt-[-33vw] 2xl:mt-[-500px] shrink-0 bg-white/30 backdrop-blur-2xl' />
+              </div>
+            </div>
+            <img className='[@media_screen_and_(min-width:430px)]:hidden col-span-2 w-[50px] mx-auto mt-[-2rem]' src='/assets/mouseline.svg' />
+          </div>
+        </div>
+        {/* Mobile View */}
+        <div className='p-2 mt-10 sm:hidden min-h-screen'>
+          <div className="flex flex-col items-center justify-start">
+            <h1 className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
+              markup
+            </h1>
+            <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
+            </p>
+            <img className='col-span-2 mx-auto mt-[2rem]' src='/assets/mouseline.svg' />
+          </div>
+        </div>
       </section>
 
       {/* Footer section */}
-      <div className="bg-brand-bg px-0 sm:px-5 2xl:px-0">
+      <div className="relative bg-brand-bg px-0 sm:px-5 2xl:px-0">
+        <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
+          <div className='border-l border-white/30 border-dashed'></div>
+          <div className='border-x border-white/30 border-dashed'></div>
+          <div className='border-r border-white/30 border-dashed'></div>
+          <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
+        </div>
         <section className='flex flex-col items-center -translate-y-24'>
-
-          {/* Display grid */}
-          <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
-            <div className='border-l border-white/30 border-dashed'></div>
-            <div className='border-x border-white/30 border-dashed'></div>
-            <div className='border-r border-white/30 border-dashed'></div>
-            <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
-          </div>
-
-          {/* Panel */}
           <div className='relative overflow-clip w-full max-w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
           [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))]'>
             <h2 className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
