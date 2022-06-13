@@ -5,3 +5,7 @@
 section {
     @apply w-full max-w-[1512px] mx-auto px-1 relative;
 }
+
+:root {
+    @apply overflow-x-hidden
+}

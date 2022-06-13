@@ -46,27 +46,56 @@ export default function Home() {
       {/* Logo section */}
       <div className="relative bg-brand-bg mt-[-10rem] sm:mt-[-20rem] lg:mt-[-28rem] xl:mt-[-32rem] -z-30">
         <section>
+
           {/* display grid */}
-          <div className='grid grid-cols-3 lg:grid-cols-4 h-[200vh] max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
-            <div className='border-l border-white/30 border-dashed'>
+          <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-7xl mx-auto px-4 sm:px-10 inset-0'>
+            <div className='border-l border-white/30 border-dashed'></div>
+            <div className='border-x border-white/30 border-dashed'></div>
+            <div className='border-r border-white/30 border-dashed'></div>
+            <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
+          </div>
+
+          {/* Logo grid */}
+          <div className='grid grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
+            <div>
               <img className='mt-96 ' src='/assets/logos/react.svg' />
               <img className='mt-48 ' src='/assets/logos/svelte.svg' />
             </div>
-            <div className='border-x border-white/30 border-dashed'>
+            <div>
               <img className='mt-[30rem]' src='/assets/logos/next.svg' />
-              <img className='mt-96' src='/assets/logos/react_dim.svg' />
+              <img className='mt-56' src='/assets/logos/react_dim.svg' />
             </div>
-            <div className='border-r border-white/30 border-dashed'>
+            <div>
               <img className='mt-[50rem]' src='/assets/logos/vue.svg' />
             </div>
-            <div className='hidden lg:block border-r border-white/30 border-dashed'>
+            <div className='hidden lg:block'>
               <img className='mt-20 translate-x-10' src='/assets/logos/next.svg' />
               <img className='mt-48' src='/assets/logos/react.svg' />
               <img className='mt-72' src='/assets/logos/svelte_dim.svg' />
             </div>
           </div>
+
+          {/* Ball */}
+          <div className='relative flex flex-col items-center pb-40'>
+            <div className='absolute w-screen bottom-0 -z-20'>
+              <img className='w-full' src='/assets/squiggly.svg' />
+              <div className='w-full bg-white h-96 -mt-2'></div>
+            </div>
+            <h1 className='text-[133px] text-white font-black text-center'>api</h1>
+            <p className='max-w-[730px] text-2xl text-white text-center mt-10'>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
+            <div className="relative inline-block mx-auto mt-40">
+              <img src='/assets/ball.webp' />
+              <div className='absolute -inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full blur-[128px] -translate-y-10 -translate-x-10'></div>
+              <div className='absolute inset-0 bg-white -z-10 rounded-full blur-2xl -translate-y-8 -translate-x-8'></div>
+            </div>
+          </div>
         </section>
       </div>
+
+      {/* Markup section */}
+      <section>
+
+      </section>
     </>
   );
 };
