@@ -13,6 +13,13 @@ module.exports = {
       colors: {
         'brand-gray': "#757575",
         'brand-bg': "#151515",
+      },
+      dropShadow: {
+        'circle': [
+          '0 0 20px #53FB2A40',
+          '0 0 42px #E9E11F',
+          '0 0 12px #53FB2A'
+        ],
       }
     },
   },

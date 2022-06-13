@@ -113,7 +113,25 @@ export default function Home() {
           <div className='relative overflow-clip w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
           [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))]'>
             <h2 className='mt-24 text-center text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
-            <p className='relative mx-auto text-[26px] max-w-3xl text-transparent mt-96 leading-10 mb-48
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mt-14 mb-24'>
+              <div className='relative'>
+                <img src='/assets/circle.svg' className='scale-125' />
+                <div className='text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>100</div>
+              </div>
+              <div className='relative'>
+                <img src='/assets/circle.svg' className='scale-125' />
+                <div className='text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>100</div>
+              </div>
+              <div className='relative'>
+                <img src='/assets/circle.svg' className='scale-125' />
+                <div className='text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>100</div>
+              </div>
+              <div className='relative'>
+                <img src='/assets/circle.svg' className='scale-125' />
+                <div className='text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>100</div>
+              </div>
+            </div>
+            <p className='relative mx-auto text-[26px] max-w-3xl text-transparent leading-10 mb-48
             bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text'>
               Search engines, business stakeholders, and end-users gauge a website’s value using metric tools like Google Lighthouse, which measures site performance, SEO, and accessibility.<br /><br />Performance is one of the most difficult scores to get to 100. This is especially true in a time when users demand JavaScript-heavy, highly-interactive web experiences.<br /><br />A Jamstack website, delivering SEO-friendly, lean {'&'} clean HTML in milliseconds, promises higher search-engine ranking and a more positive, responsive end-user experience.</p>
           </div>
