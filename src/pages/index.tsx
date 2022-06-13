@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <>
 
-      {/* hero */}
+      {/* Hero section */}
       <section>
         <div className="flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-2 md:px-0">
           <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
@@ -19,8 +19,8 @@ export default function Home() {
             </div>
             <div className=''>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[5vw] 2xl:rounded-[68px] ' src='/assets/rectangle01.webp' />
-                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] rounded-[5vw] 2xl:rounded-[68px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
+                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
               </div>
               {/* hide blur cards if unsupported */}
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
@@ -43,6 +43,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Logo section */}
+      <div className="relative bg-brand-bg mt-[-10rem] sm:mt-[-20rem] lg:mt-[-28rem] xl:mt-[-32rem] -z-30">
+        <section>
+          {/* display grid */}
+          <div className='grid grid-cols-3 lg:grid-cols-4 h-[200vh] max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
+            <div className='border-l border-white/30 border-dashed'>
+              <img className='mt-96 ' src='/assets/logos/react.svg' />
+              <img className='mt-48 ' src='/assets/logos/svelte.svg' />
+            </div>
+            <div className='border-x border-white/30 border-dashed'>
+              <img className='mt-[30rem]' src='/assets/logos/next.svg' />
+              <img className='mt-96' src='/assets/logos/react_dim.svg' />
+            </div>
+            <div className='border-r border-white/30 border-dashed'>
+              <img className='mt-[50rem]' src='/assets/logos/vue.svg' />
+            </div>
+            <div className='hidden lg:block border-r border-white/30 border-dashed'>
+              <img className='mt-20 translate-x-10' src='/assets/logos/next.svg' />
+              <img className='mt-48' src='/assets/logos/react.svg' />
+              <img className='mt-72' src='/assets/logos/svelte_dim.svg' />
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

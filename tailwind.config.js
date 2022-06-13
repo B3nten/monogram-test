@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         'brand-gray': "#757575",
+        'brand-bg': "#151515",
       }
     },
   },
