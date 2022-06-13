@@ -96,7 +96,34 @@ export default function Home() {
       <section>
 
       </section>
+
+      {/* Footer section */}
+      <div className="bg-brand-bg">
+        <section className='flex flex-col items-center -translate-y-24'>
+
+          {/* Display grid */}
+          <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
+            <div className='border-l border-white/30 border-dashed'></div>
+            <div className='border-x border-white/30 border-dashed'></div>
+            <div className='border-r border-white/30 border-dashed'></div>
+            <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
+          </div>
+
+          {/* Panel */}
+          <div className='relative overflow-clip w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
+          [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))]'>
+            <h2 className='mt-24 text-center text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
+            <p className='relative mx-auto text-[26px] max-w-3xl text-transparent mt-96 leading-10 mb-48
+            bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text'>
+              Search engines, business stakeholders, and end-users gauge a website’s value using metric tools like Google Lighthouse, which measures site performance, SEO, and accessibility.<br /><br />Performance is one of the most difficult scores to get to 100. This is especially true in a time when users demand JavaScript-heavy, highly-interactive web experiences.<br /><br />A Jamstack website, delivering SEO-friendly, lean {'&'} clean HTML in milliseconds, promises higher search-engine ranking and a more positive, responsive end-user experience.</p>
+          </div>
+          {/* Footer */}
+          <div className='relative space-y-5 mt-60 mb-48'>
+            <p className='text-2xl text-white text-center'>This is a design test by Benton Boychuk-Chorney for Monogram.</p>
+            <p className='text-5xl text-center'>💜</p>
+          </div>
+        </section>
+      </div >
     </>
   );
 };
-
