@@ -69,11 +69,11 @@ export default function Home() {
           <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
             <div>
               <img className='mt-32 sm:mt-72 md:mt-96 ' src='/assets/logos/react.svg' />
-              <img className='mt-32 sm:mt-60 md:mt-48 ' src='/assets/logos/svelte.svg' />
+              <img className='mt-48 sm:mt-60 md:mt-48 ' src='/assets/logos/svelte.svg' />
             </div>
             <div>
-              <img className='mt-48 sm:mt-96 md:mt-[30rem]' src='/assets/logos/next.svg' />
-              <img className='sm:hidden mt-24 mb-24 md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' />
+              <img className='mt-64 sm:mt-96 md:mt-[30rem]' src='/assets/logos/next.svg' />
+              <img className='sm:hidden mt-48 md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' />
               <img className='hidden lg:mt-60 lg:block' src='/assets/logos/react_dim.svg' />
             </div>
             <div className='hidden sm:block'>
@@ -84,15 +84,15 @@ export default function Home() {
             <div className='hidden lg:block overflow-clip'>
               <img className='md:mt-20 translate-x-10' src='/assets/logos/next.svg' />
               <img className='md:mt-48' src='/assets/logos/react.svg' />
-              <img className='md:mt-80' src='/assets/logos/svelte_dim.svg' />
+              <img className='md:mt-80 pb-10' src='/assets/logos/svelte_dim.svg' />
             </div>
           </div>
 
           {/* Ball */}
-          <div className='relative flex flex-col items-center pb-40'>
+          <div className='relative flex flex-col items-center pb-40 mt-10'>
             <div className='absolute w-screen top-1/2 bottom-0 flex flex-col -z-10'>
-              <img src='/assets/squiggly.svg' className='w-full scale-110' />
-              <div className='bg-white basis-[110%] -mt-4'></div>
+              <img src='/assets/squiggly.svg' className='w-full' />
+              <div className='bg-white basis-[110%]'></div>
             </div>
             <h1 className='text-6xl lg:text-[133px] text-white font-black text-center'>api</h1>
             <p className='max-w-[85%] md:max-w-[730px] lg:text-2xl text-white text-center mt-10 mb-16 lg:mb-40'>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
@@ -115,22 +115,20 @@ export default function Home() {
           </h1>
           <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
             <div>
-              <p className='md:ml-[8vw] 2xl:ml-32 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
+              <p className='md:ml-[8vw] 2xl:ml-32 mt-5 text-sm sm:text-base lg:text-lg 2xl:text-2xl max-w-md sm:max-w-[549px] text-[#414141]'>
+                When ready for deployment, a static-site generator such as Astro or Next.js is used to compile the website. The end result is a collection of pre-rendered HTML pages that can be delivered lightning-fast over a CDN like Vercel’s Edge Network.
               </p>
-              <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' />
             </div>
             <div className=''>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
-                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[68px]' src='/assets/blocks.webp' />
+                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] rounded-[68px] 2xl:mt-[-171px]' src='/assets/blocks.webp' />
               </div>
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
                 <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
                 <div className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[662px] rounded-[5vw] 2xl:rounded-[68px] mt-[-33vw] 2xl:mt-[-500px] shrink-0 bg-white/30 backdrop-blur-2xl' />
               </div>
             </div>
-            <img className='[@media_screen_and_(min-width:430px)]:hidden col-span-2 w-[50px] mx-auto mt-[-2rem]' src='/assets/mouseline.svg' />
           </div>
         </div>
         {/* Mobile View */}
@@ -142,7 +140,6 @@ export default function Home() {
             <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
             </p>
-            <img className='col-span-2 mx-auto mt-[2rem]' src='/assets/mouseline.svg' />
           </div>
         </div>
       </section>
