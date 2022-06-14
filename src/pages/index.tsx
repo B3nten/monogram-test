@@ -144,6 +144,36 @@ export default function Home() {
         </div>
       </section>
 
+      <div className='overflow-hidden'>
+        <div className="flex ml-[20vw] lg:ml-[36.5vw]">
+          <Block color='bg-[#0165B1]' />
+          <Block color='bg-[#FEC05C]' />
+        </div>
+        <div className="flex ml-[4.8vw]">
+          <Block color='bg-[#D12510]/60' />
+          <Block color='bg-[#FEC05C]/60' />
+          <Block color='bg-black/60' />
+          <Block color='hidden lg:block bg-[#D12510]/60' />
+        </div>
+        <div className="flex ml-[-4.8vw]">
+          <Block color='bg-black/30' />
+          <Block color='bg-[#0165B1]/30' />
+          <Block color='bg-[#97B1B2]/30' />
+          <Block color='bg-[#0165B1]/30' />
+          <Block color='bg-[#FEC05C]/30' />
+        </div>
+        <div className="flex ml-[-14.4vw]">
+          <Block color='bg-[#D12510]/20' />
+          <Block color='bg-[#FEC05C]/20' />
+          <Block color='bg-[#97B1B2]/20' />
+          <Block color='bg-[#0165B1]/20' />
+          <Block color='bg-[#FEC05C]/20' />
+          <Block color='bg-[#D12510]/20' />
+        </div>
+
+      </div>
+
+
       {/* Footer section */}
       <div className="relative bg-brand-bg px-0 sm:px-5 2xl:px-0 w-screen">
         <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
@@ -152,7 +182,7 @@ export default function Home() {
           <div className='border-r border-white/30 border-dashed'></div>
           <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
         </div>
-        <section className='flex flex-col items-center -translate-y-24'>
+        <section className='flex flex-col items-center -translate-y-10 xl:-translate-y-[5.5rem]'>
           <div className='relative w-full max-w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
           [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))] scale-x-[1.01] md:scale-x-100'>
             <h2 className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
@@ -184,4 +214,8 @@ function Circle() {
       100
     </div>
   </div>;
+}
+
+function Block({ color }: { color: string; }) {
+  return <div className={`w-[32vw] h-[6vw] lg:w-[21vw] lg:h-[3.8vw] rounded-[.5vw] ${color}`}></div>;
 }
