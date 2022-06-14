@@ -90,7 +90,7 @@ export default function Home() {
 
           {/* Ball */}
           <div className='relative flex flex-col items-center pb-40'>
-            <div className='absolute w-screen top-1/2 bottom-0 flex flex-col -z-10'>
+            <div className='absolute top-1/2 bottom-0 flex flex-col -z-10'>
               <img src='/assets/squiggly.svg' className='w-full' />
               <div className='bg-white basis-[110%] -mt-4'></div>
             </div>
