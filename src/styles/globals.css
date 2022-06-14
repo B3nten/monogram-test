@@ -8,9 +8,4 @@ section {
 
 /* :root {
     @apply overflow-x-hidden;
-    transform: unset !important;
 } */
-
-body {
-    @apply overflow-x-hidden
-}
