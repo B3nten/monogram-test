@@ -66,7 +66,7 @@ export default function Home() {
             <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
           </div>
           {/* Logo grid */}
-          <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125 overflow-clip'>
+          <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
             <div>
               <img className='mt-32 sm:mt-72 md:mt-96 ' src='/assets/logos/react.svg' />
               <img className='mt-32 sm:mt-60 md:mt-48 ' src='/assets/logos/svelte.svg' />
@@ -156,7 +156,7 @@ export default function Home() {
           <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
         </div>
         <section className='flex flex-col items-center -translate-y-24'>
-          <div className='relative overflow-clip w-full max-w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
+          <div className='relative w-full max-w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
           [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))]'>
             <h2 className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
             <div className='grid grid-cols-2 sm:grid-cols-4 sm:gap-4 mt-10 lg:mt-14 mb-16 lg:mb-24'>
