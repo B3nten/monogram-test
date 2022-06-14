@@ -8,7 +8,7 @@ export default function Home() {
         <div className="hidden sm:flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-2 md:px-0">
           <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
             jamstack
-            <span className='bg-[url(/assets/gradient.webp)] bg-[length:300px_200px] sm:bg-[length:500px_450px] lg:bg-[length:800px_600px] bg-right-top bg-clip-text text-transparent'> 101</span>
+            <span className='bg-[url(/assets/text.webp)] bg-bottom bg-cover bg-clip-text text-transparent'> 101</span>
           </h1>
           <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
             <div>
@@ -31,16 +31,16 @@ export default function Home() {
           </div>
         </div>
         {/* Mobile View */}
-        <div className='p-2 mt-10 sm:hidden min-h-screen'>
-          <div className="flex flex-col items-center justify-start">
+        <div className='p-2 mt-10 sm:hidden h-screen'>
+          <div className="flex flex-col items-center justify-start h-full">
             <h1 className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
               jamstack
             </h1>
-            <span className='text-8xl font-black bg-[url(/assets/gradient.webp)] bg-[length:300px_200px] sm:bg-[length:500px_450px] lg:bg-[length:800px_600px] bg-right-top bg-clip-text text-transparent'> 101</span>
+            <span className='text-8xl font-black bg-[url(/assets/text.webp)] bg-bottom bg-cover bg-clip-text text-transparent'> 101</span>
             <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
             </p>
-            <img className='col-span-2 mx-auto mt-[2rem]' src='/assets/mouseline.svg' />
+            <img className='col-span-2 mx-auto mt-10 h-1/2' src='/assets/mouseline.svg' />
           </div>
         </div>
       </section>
@@ -68,20 +68,22 @@ export default function Home() {
           {/* Logo grid */}
           <div className='grid grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
             <div>
-              <img className='mt-96 ' src='/assets/logos/react.svg' />
-              <img className='mt-48 ' src='/assets/logos/svelte.svg' />
+              <img className='mt-72 md:mt-96 ' src='/assets/logos/react.svg' />
+              <img className='mt-96 md:mt-48 ' src='/assets/logos/svelte.svg' />
             </div>
             <div>
-              <img className='mt-[30rem]' src='/assets/logos/next.svg' />
-              <img className='mt-56' src='/assets/logos/react_dim.svg' />
+              <img className='mt-96 md:mt-[30rem]' src='/assets/logos/next.svg' />
+              <img className='mt-20 md:mt-56' src='/assets/logos/react_dim.svg' />
             </div>
             <div>
-              <img className='mt-[50rem]' src='/assets/logos/vue.svg' />
+              <img className='mt-[12rem] md:mt-[50rem]' src='/assets/logos/vue.svg' />
+              <img className='mt-[10rem] md:mt-72 lg:hidden' src='/assets/logos/svelte_dim.svg' />
+              <img className='mt-24 md:mt-20 opacity-30 md:hidden' src='/assets/logos/next.svg' />
             </div>
             <div className='hidden lg:block overflow-clip'>
-              <img className='mt-20 translate-x-10' src='/assets/logos/next.svg' />
-              <img className='mt-48' src='/assets/logos/react.svg' />
-              <img className='mt-72' src='/assets/logos/svelte_dim.svg' />
+              <img className='md:mt-20 translate-x-10' src='/assets/logos/next.svg' />
+              <img className='md:mt-48' src='/assets/logos/react.svg' />
+              <img className='md:mt-72' src='/assets/logos/svelte_dim.svg' />
             </div>
           </div>
 
