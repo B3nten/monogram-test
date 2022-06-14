@@ -59,31 +59,32 @@ export default function Home() {
       <div className="relative bg-brand-bg mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] -z-30">
         <section>
           {/* display grid */}
-          <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
+          <div className='absolute grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
             <div className='border-l border-white/30 border-dashed'></div>
             <div className='border-x border-white/30 border-dashed'></div>
-            <div className='border-r border-white/30 border-dashed'></div>
+            <div className='hidden sm:block border-r border-white/30 border-dashed'></div>
             <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
           </div>
           {/* Logo grid */}
-          <div className='grid grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
+          <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125 overflow-clip'>
             <div>
-              <img className='mt-72 md:mt-96 ' src='/assets/logos/react.svg' />
-              <img className='mt-96 md:mt-48 ' src='/assets/logos/svelte.svg' />
+              <img className='mt-32 sm:mt-72 md:mt-96 ' src='/assets/logos/react.svg' />
+              <img className='mt-32 sm:mt-60 md:mt-48 ' src='/assets/logos/svelte.svg' />
             </div>
             <div>
-              <img className='mt-96 md:mt-[30rem]' src='/assets/logos/next.svg' />
-              <img className='mt-20 md:mt-56' src='/assets/logos/react_dim.svg' />
+              <img className='mt-48 sm:mt-96 md:mt-[30rem]' src='/assets/logos/next.svg' />
+              <img className='sm:hidden mt-24 mb-24 md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' />
+              <img className='hidden lg:mt-60 lg:block' src='/assets/logos/react_dim.svg' />
             </div>
-            <div>
-              <img className='mt-[12rem] md:mt-[50rem]' src='/assets/logos/vue.svg' />
-              <img className='mt-[10rem] md:mt-72 lg:hidden' src='/assets/logos/svelte_dim.svg' />
+            <div className='hidden sm:block'>
+              <img className='mt-[12rem] md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' />
+              <img className='mt-[10rem] md:mt-36 lg:hidden' src='/assets/logos/react_dim.svg' />
               <img className='mt-24 md:mt-20 opacity-30 md:hidden' src='/assets/logos/next.svg' />
             </div>
             <div className='hidden lg:block overflow-clip'>
               <img className='md:mt-20 translate-x-10' src='/assets/logos/next.svg' />
               <img className='md:mt-48' src='/assets/logos/react.svg' />
-              <img className='md:mt-72' src='/assets/logos/svelte_dim.svg' />
+              <img className='md:mt-80' src='/assets/logos/svelte_dim.svg' />
             </div>
           </div>
 
