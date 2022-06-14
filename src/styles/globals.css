@@ -6,7 +6,11 @@ section {
     @apply w-full max-w-[1512px] mx-auto relative;
 }
 
-:root {
+/* :root {
     @apply overflow-x-hidden;
     transform: unset !important;
+} */
+
+body {
+    @apply overflow-x-hidden
 }
