@@ -6,6 +6,7 @@ section {
     @apply w-full max-w-[1512px] mx-auto relative;
 }
 
-/* :root {
-    @apply overflow-x-hidden;
-} */
+html,
+body {
+    @apply overflow-x-clip;
+}
