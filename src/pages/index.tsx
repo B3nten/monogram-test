@@ -56,7 +56,7 @@ export default function Home() {
       </section>;
 
       {/* Logo section */}
-      <div className="relative bg-brand-bg mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] -z-30">
+      <div className="relative bg-brand-bg mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] -z-30 w-screen">
         <section>
           {/* display grid */}
           <div className='absolute grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* Footer section */}
-      <div className="relative bg-brand-bg px-0 sm:px-5 2xl:px-0">
+      <div className="relative bg-brand-bg px-0 sm:px-5 2xl:px-0 w-screen">
         <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
           <div className='border-l border-white/30 border-dashed'></div>
           <div className='border-x border-white/30 border-dashed'></div>
