@@ -47,19 +47,19 @@ export default function Home() {
               <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
               </p>
-              <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' />
+              <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' alt='' />
             </div>
             <div>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
-                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' alt='' />
+                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' alt='' />
               </div>
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
                 <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
                 <div className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[662px] rounded-[5vw] 2xl:rounded-[68px] mt-[-33vw] 2xl:mt-[-500px] shrink-0 bg-white/30 backdrop-blur-2xl' />
               </div>
             </div>
-            <img className='[@media_screen_and_(min-width:430px)]:hidden col-span-2 w-[50px] mx-auto mt-[-2rem]' src='/assets/mouseline.svg' />
+            <img className='[@media_screen_and_(min-width:430px)]:hidden col-span-2 w-[50px] mx-auto mt-[-2rem]' src='/assets/mouseline.svg' alt='' />
           </div>
         </div>
         {/* Mobile View */}
@@ -72,7 +72,7 @@ export default function Home() {
             <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
             </p>
-            <img className='col-span-2 mx-auto mt-10 h-1/2' src='/assets/mouseline.svg' />
+            <img className='col-span-2 mx-auto mt-10 h-1/2' src='/assets/mouseline.svg' alt='' />
           </div>
         </div>
       </section>
@@ -84,7 +84,7 @@ export default function Home() {
           <h2 ref={jsHeader} className='text-white text-4xl md:text-6xl lg:text-8xl xl:text-[133px] font-black 
           '>javascript</h2>
           <p ref={jsText} className='text-sm sm:text-lg text-white max-w-md md:max-w-[586px] md:leading-loose font-light '>Statically generated pages are brought to life with client-side JavaScript libraries and frameworks, such as Algolia and Next.js.</p>
-          <img className='w-[50vw] md:w-[60vw] xl:w-auto relative z-10' src='/assets/computer.webp' />
+          <img className='w-[50vw] md:w-[60vw] xl:w-auto relative z-10' src='/assets/computer.webp' alt="A computer with computer code displayed" />
         </div>
       </section>;
 
@@ -102,30 +102,30 @@ export default function Home() {
           {/* Logo grid */}
           <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
             <div>
-              <img className='mt-32 sm:mt-72 md:mt-96 ' src='/assets/logos/react.svg' />
-              <img className='mt-48 sm:mt-60 md:mt-48 ' src='/assets/logos/svelte.svg' />
+              <img className='mt-32 sm:mt-72 md:mt-96 ' src='/assets/logos/react.svg' alt='React.js logo' />
+              <img className='mt-48 sm:mt-60 md:mt-48 ' src='/assets/logos/svelte.svg' alt='Svelte logo' />
             </div>
             <div>
-              <img className='mt-64 sm:mt-96 md:mt-[30rem]' src='/assets/logos/next.svg' />
-              <img className='sm:hidden mt-48 md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' />
-              <img className='hidden lg:mt-60 lg:block' src='/assets/logos/react_dim.svg' />
+              <img className='mt-64 sm:mt-96 md:mt-[30rem]' src='/assets/logos/next.svg' alt='Next.js logo' />
+              <img className='sm:hidden mt-48 md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' alt='Vue.js logo' />
+              <img className='hidden lg:mt-60 lg:block' src='/assets/logos/react_dim.svg' alt='React.js logo' />
             </div>
             <div className='hidden sm:block'>
-              <img className='mt-[12rem] md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' />
-              <img className='mt-[10rem] md:mt-36 lg:hidden' src='/assets/logos/react_dim.svg' />
-              <img className='mt-24 md:mt-20 opacity-30 md:hidden' src='/assets/logos/next.svg' />
+              <img className='mt-[12rem] md:mt-[20rem] lg:mt-[50rem]' src='/assets/logos/vue.svg' alt='Vue.js logo' />
+              <img className='mt-[10rem] md:mt-36 lg:hidden' src='/assets/logos/react_dim.svg' alt='React.js logo' />
+              <img className='mt-24 md:mt-20 opacity-30 md:hidden' src='/assets/logos/next.svg' alt='Next.js logo' />
             </div>
             <div className='hidden lg:block overflow-clip'>
-              <img className='md:mt-20 translate-x-10' src='/assets/logos/next.svg' />
-              <img className='md:mt-48' src='/assets/logos/react.svg' />
-              <img className='md:mt-80 pb-10' src='/assets/logos/svelte_dim.svg' />
+              <img className='md:mt-20 translate-x-10' src='/assets/logos/next.svg' alt='Next.js logo' />
+              <img className='md:mt-48' src='/assets/logos/react.svg' alt='React.js logo' />
+              <img className='md:mt-80 pb-10' src='/assets/logos/svelte_dim.svg' alt='Svelte logo' />
             </div>
           </div>
 
           {/* Ball */}
           <div className='relative flex flex-col items-center pb-40 mt-10'>
             <div className='absolute w-screen top-1/2 bottom-0 flex flex-col -z-10'>
-              <img src='/assets/squiggly.svg' className='w-full' />
+              <img src='/assets/squiggly.svg' className='w-full' alt='' />
               <div className='bg-white basis-[110%]'></div>
             </div>
             <h1 ref={apiHeader} className='text-6xl lg:text-[133px] text-white font-black text-center '>api</h1>
@@ -135,9 +135,8 @@ export default function Home() {
                 {/* // Render ball loader if GPU is strong enough  */}
                 {useThree && <Ball />}
                 {/* Or else render the image */}
-                {!useThree && <img src='/assets/ball.webp' />}
+                {!useThree && <img src='/assets/ball.webp' alt='' />}
               </div>
-              <img src='/assets/ball.webp' className='hidden' />
               <div className='absolute inset-0 lg:-inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full 
               lg:blur-[128px] blur-3xl -translate-y-5 lg:-translate-y-10 -translate-x-5 lg:-translate-x-10'></div>
               <div className='absolute inset-2 lg:inset-0 bg-white -z-10 rounded-full blur-xl lg:blur-2xl -translate-y-4 lg:-translate-y-8 -translate-x-4 lg:-translate-x-8'></div>
@@ -174,8 +173,8 @@ export default function Home() {
             {/* blocks */}
             <div className=''>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[68px]' src='/assets/blocks.webp' />
-                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] rounded-[68px] 2xl:mt-[-171px]' src='/assets/blocks.webp' />
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[68px]' src='/assets/blocks.webp' alt='' />
+                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] rounded-[68px] 2xl:mt-[-171px]' src='/assets/blocks.webp' alt='' />
               </div>
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
                 <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
@@ -270,7 +269,7 @@ export default function Home() {
           {/* Footer */}
           <div ref={footerText} className='relative space-y-5 mt-60 mb-48'>
             <p className='text-2xl text-white text-center'>This is a design test by Benton Boychuk-Chorney for Monogram.</p>
-            <img src='/assets/heart.svg' className='mx-auto animate-pulse' />
+            <img src='/assets/heart.svg' className='mx-auto animate-pulse' alt='Heart icon' />
           </div>
         </section>
       </div >
