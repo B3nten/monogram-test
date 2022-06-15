@@ -61,6 +61,7 @@ export function API() {
 							/>
 						</Parallax>
 					</div>
+					{/* Medium and up*/}
 					<div className="hidden sm:block">
 						<Parallax speed={10}>
 							<img
@@ -84,6 +85,7 @@ export function API() {
 							/>
 						</Parallax>
 					</div>
+					{/* Large and up */}
 					<div className="hidden overflow-clip lg:block">
 						<Parallax speed={-28}>
 							<img

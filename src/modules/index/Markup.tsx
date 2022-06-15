@@ -96,12 +96,12 @@ export function Markup() {
 					<div aria-hidden="true">
 						<div className="flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12">
 							<img
-								className="h-[42vw] w-[18vw] rounded-[68px] object-cover 2xl:h-[629px] 2xl:w-[280px] "
+								className="h-[42vw] w-[18vw] rounded-[4.5vw] object-cover 2xl:h-[629px] 2xl:w-[280px] 2xl:rounded-[68px] "
 								src="/assets/blocks.webp"
 								alt=""
 							/>
 							<img
-								className="mt-[-11vw] h-[44vw] w-[18vw] rounded-[68px] object-cover object-right 2xl:mt-[-171px] 2xl:h-[670px] 2xl:w-[280px]"
+								className="mt-[-11vw] h-[44vw] w-[18vw] rounded-[4.5vw] object-cover object-right 2xl:mt-[-171px] 2xl:h-[670px] 2xl:w-[280px] 2xl:rounded-[68px]"
 								src="/assets/blocks.webp"
 								alt=""
 							/>

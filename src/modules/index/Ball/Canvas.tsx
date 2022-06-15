@@ -4,9 +4,11 @@ import { Environment } from '@react-three/drei'
 import { Model } from './Model'
 
 export default function Three() {
+	// calc scrollbar width
 	const scrollbarWidth = window.innerWidth - document.body.clientWidth
 
 	return (
+		// set width to screen minus scrollbar, bypassing section max-width
 		<div
 			className={`mx-auto aspect-square max-w-[914px]`}
 			style={{ width: `calc(100vw - ${scrollbarWidth}px` }}

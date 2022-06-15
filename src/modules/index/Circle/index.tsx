@@ -7,9 +7,10 @@ export function Circle({ delay = 0 }: { delay: number }) {
 	const count = useRef(0)
 	const counter = useRef<HTMLDivElement | null>(null)
 
-	// Incrementer sets a ref and directly mutates the dom for performance reasons.
+	// Incrementer sets a ref and directly mutates the dom for performance reasons. Effect runs when animate = true
 	useEffect(() => {
 		const interval = setInterval(() => {
+			// check if count is finished, return
 			if (count.current > 99) {
 				clearInterval(interval)
 				return
@@ -32,7 +33,7 @@ export function Circle({ delay = 0 }: { delay: number }) {
 			>
 				0
 			</div>
-
+			{/* SVG */}
 			<svg
 				className="[transform:translateZ(0)_scale(1.25)]"
 				width="100%"
