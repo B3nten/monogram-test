@@ -1,29 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
-//@ts-ignore
-export function Model(props) {
+import { GroupProps, useThree } from "@react-three/fiber";
+
+export function Model(props: GroupProps) {
     const { viewport } = useThree();
-    const group = useRef();
+    const group = useRef<GroupProps>({});
     useEffect(() => {
         const x = innerWidth / 2;
         const y = innerHeight / 2;
-        //@ts-ignore
-        function foo(e) {
+        function foo(e: MouseEvent) {
             const mouseX = (e.clientX - x) / x;
             const mouseY = (e.clientY - y) / x;
-            //@ts-ignore
-            group.current.rotation.x = (mouseY * .3) + 0;
-            //@ts-ignore
-            group.current.rotation.y = (mouseX * .2) - 1.6;
+            if (typeof group.current?.rotation?.x === 'number' && typeof group.current?.rotation?.y === 'number') {
+                group.current.rotation.x = (mouseY * .3) + 0;
+                group.current.rotation.y = (mouseX * .2) - 1.6;
+            }
         }
         document.addEventListener('mousemove', foo);
         return () => {
             removeEventListener('mousemove', foo);
         };
     }, [innerHeight, innerWidth]);
-    //@ts-ignore
-    const { nodes, materials } = useGLTF("/assets/models/Ball.glb");
+
+    const { nodes, materials }: any = useGLTF("/assets/models/Ball.glb");
     return (
         <group rotation={[0, -1.6, 0]} ref={group} {...props} dispose={null}>
             <group scale={(viewport.width / 2.53)}>

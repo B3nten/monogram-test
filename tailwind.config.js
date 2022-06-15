@@ -20,7 +20,26 @@ module.exports = {
           '0 0 42px #E9E11F',
           '0 0 12px #53FB2A'
         ],
-      }
+      },
+      animation: {
+        blob: "blob 6s ease-in-out infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%": {
+            transform: "scale(1, 1)",
+          },
+          "33%": {
+            transform: "scale(1.04, 1.07)",
+          },
+          "66%": {
+            transform: "scale(0.94, .98)",
+          },
+          "100%": {
+            transform: "scale(1, 1)",
+          },
+        },
+      },
     },
   },
   plugins: [],
