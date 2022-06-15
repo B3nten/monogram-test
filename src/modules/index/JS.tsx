@@ -12,8 +12,8 @@ export function JS() {
                 {/* <div className="absolute -z-10 px-2 md:px-4 2xl:px-0">
                     <img src='/assets/orange_square.webp' alt='' />
                 </div>  */}
-                <div className='absolute -z-10 w-full px-2 md:px-4 2xl:px-0 max-w-[1397px] h-[60vw] max-h-[893px]'>
-                    <Image layout='fill' src='/assets/orange_square.webp' alt='' />
+                <div className='absolute -z-10 w-full px-2 md:px-4 2xl:px-0 max-w-[1397px] h-[59vw] max-h-[893px]'>
+                    <Image layout='fill' src='/assets/orange_square.webp' alt='bg' />
                 </div>
                 <img className='hidden lg:block absolute h-[30vw] w-[16vw] 2xl:w-auto 2xl:h-auto right-[9.5vw] 2xl:right-36 top-[10.5vw] 2xl:top-40' src='/assets/jsarrow.svg' />
                 <h2 ref={jsHeader} className='text-white text-4xl md:text-6xl lg:text-8xl xl:text-[133px] font-black 
