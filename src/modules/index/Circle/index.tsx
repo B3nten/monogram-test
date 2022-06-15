@@ -29,10 +29,10 @@ export function Circle({ delay = 0 }: { delay: number; }) {
             <svg className='[transform:translateZ(0)_scale(1.25)]' width="100%" height="100%" viewBox="0 0 338 338" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.8" filter="url(#filter0_ddd_101_247)">
                     {/* path css & set play class when animate (inview) = true */}
-                    <path className={`${styles.path} ${animate && styles.play}`} d="M275 169C275 141.861 264.591 115.756 245.917 96.0635C227.244 76.3707 201.728 64.5903 174.628 63.1496C147.527 61.7089 120.906 70.7175 100.25 88.3194C79.5935 105.921 66.4752 130.776 63.5978 157.761C60.7204 184.747 68.3031 211.809 84.7836 233.37C101.264 254.932 125.387 269.351 152.182 273.657C178.977 277.963 206.403 271.828 228.809 256.515C251.215 241.203 266.895 217.879 272.617 191.351" stroke="#EFFFE2" stroke-linecap="round" stroke-width="4" />
+                    <path className={`${styles.path} ${animate && styles.play}`} d="M275 169C275 141.861 264.591 115.756 245.917 96.0635C227.244 76.3707 201.728 64.5903 174.628 63.1496C147.527 61.7089 120.906 70.7175 100.25 88.3194C79.5935 105.921 66.4752 130.776 63.5978 157.761C60.7204 184.747 68.3031 211.809 84.7836 233.37C101.264 254.932 125.387 269.351 152.182 273.657C178.977 277.963 206.403 271.828 228.809 256.515C251.215 241.203 266.895 217.879 272.617 191.351" stroke="#EFFFE2" strokeLinecap="round" strokeWidth="4" />
                 </g>
                 <defs>
-                    <filter id="filter0_ddd_101_247" x="0" y="-1.90735e-06" width="338" height="338.001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_ddd_101_247" x="0" y="-1.90735e-06" width="338" height="338.001" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood flood-opacity="0" result="BackgroundImageFix" />
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                         <feOffset />
