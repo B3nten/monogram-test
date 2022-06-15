@@ -1,46 +1,73 @@
 export function Hero() {
-
-    return (
-        <section>
-            {/* Desktop */}
-            <div className="hidden sm:flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-4 2xl:px-0">
-                <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
-                    jamstack
-                    <span className='bg-[url(/assets/text.webp)] bg-bottom bg-cover bg-clip-text text-transparent'> 101</span>
-                </h1>
-                <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
-                    <div>
-                        <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
-                        </p>
-                        <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' alt='' />
-                    </div>
-                    <div aria-hidden="true">
-                        <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                            <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' alt='' />
-                            <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' alt='' />
-                        </div>
-                        <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
-                            <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
-                            <div className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[662px] rounded-[5vw] 2xl:rounded-[68px] mt-[-33vw] 2xl:mt-[-500px] shrink-0 bg-white/30 backdrop-blur-2xl' />
-                        </div>
-                    </div>
-                    <img className='[@media_screen_and_(min-width:430px)]:hidden col-span-2 w-[50px] mx-auto mt-[-2rem]' src='/assets/mouseline.svg' alt='' />
-                </div>
-            </div>
-            {/* Mobile View */}
-            <div className='p-2 mt-10 sm:hidden h-screen'>
-                <div className="flex flex-col items-center justify-start h-full">
-                    <h1 className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
-                        jamstack
-                    </h1>
-                    <span className='text-8xl font-black bg-[url(/assets/text.webp)] bg-bottom bg-cover bg-clip-text text-transparent'> 101</span>
-                    <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
-                    </p>
-                    <img className='col-span-2 mx-auto mt-10 h-1/2' src='/assets/mouseline.svg' alt='' />
-                </div>
-            </div>
-        </section>
-    );
+	return (
+		<section>
+			{/* Desktop */}
+			<div className="mt-10 hidden flex-col items-start p-1 sm:flex sm:px-4 md:mt-20 lg:mt-36 2xl:px-0">
+				<h1 className="text-5xl font-black leading-[1.15] tracking-tight sm:text-8xl md:ml-[8vw] lg:text-[133px] 2xl:ml-32">
+					jamstack
+					<span className="bg-[url(/assets/text.webp)] bg-cover bg-clip-text bg-bottom text-transparent">
+						{' '}
+						101
+					</span>
+				</h1>
+				<div className="mt-7 grid grid-cols-2 gap-4 lg:gap-8">
+					<div>
+						<p className="mt-5 max-w-md text-sm text-brand-gray sm:max-w-[549px] sm:text-base md:ml-[12vw] lg:text-lg 2xl:ml-44">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt
+							proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui
+							vivamus sit.
+						</p>
+						<img
+							className="mx-auto mt-24 hidden w-[10vw] lg:w-auto [@media_screen_and_(min-width:430px)]:block"
+							src="/assets/mouseline.svg"
+							alt=""
+						/>
+					</div>
+					<div aria-hidden="true">
+						{/* Image cards */}
+						<div className="flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12">
+							<img
+								className="h-[42vw] w-[18vw] 2xl:h-[629px] 2xl:w-[280px]"
+								src="/assets/rectangle01.webp"
+								alt=""
+							/>
+							<img
+								className="mt-[-11vw] h-[44vw] w-[18vw] 2xl:mt-[-171px] 2xl:h-[670px] 2xl:w-[280px]"
+								src="/assets/rectangle02.webp"
+								alt=""
+							/>
+						</div>
+						{/* Blur, hidden on platforms that don't support backdrop blur */}
+						<div className="ml-[10vw] flex space-x-[2.5vw] opacity-0 2xl:ml-40 2xl:space-x-[40px] [@supports(backdrop-filter:blur(0))]:opacity-100">
+							<div className="mt-[-20vw] h-[32vw] w-[18vw] shrink-0 rounded-[5vw] bg-white/30 backdrop-blur-2xl 2xl:mt-[-300px] 2xl:h-[479px] 2xl:w-[280px] 2xl:rounded-[68px]" />
+							<div className="mt-[-33vw] h-[44vw] w-[18vw] shrink-0 rounded-[5vw] bg-white/30 backdrop-blur-2xl 2xl:mt-[-500px] 2xl:h-[662px] 2xl:w-[280px] 2xl:rounded-[68px]" />
+						</div>
+					</div>
+					<img
+						className="col-span-2 mx-auto mt-[-2rem] w-[50px] [@media_screen_and_(min-width:430px)]:hidden"
+						src="/assets/mouseline.svg"
+						alt=""
+					/>
+				</div>
+			</div>
+			{/* Mobile View */}
+			<div className="mt-10 h-screen p-2 sm:hidden">
+				<div className="flex h-full flex-col items-center justify-start">
+					<h1 className="text-7xl font-black leading-[1.15] tracking-tight sm:text-8xl lg:text-[133px]">
+						jamstack
+					</h1>
+					<span className="bg-[url(/assets/text.webp)] bg-cover bg-clip-text bg-bottom text-8xl font-black text-transparent">
+						{' '}
+						101
+					</span>
+					<p className="mt-5 max-w-md text-sm text-brand-gray sm:max-w-[549px] sm:text-base md:ml-[12vw] lg:text-lg 2xl:ml-44">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt
+						proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus
+						sit.
+					</p>
+					<img className="col-span-2 mx-auto mt-10 h-1/2" src="/assets/mouseline.svg" alt="" />
+				</div>
+			</div>
+		</section>
+	)
 }

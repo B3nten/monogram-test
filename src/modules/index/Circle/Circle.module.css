@@ -1,18 +1,18 @@
 .path {
-    stroke-dasharray: 800;
-    stroke-dashoffset: 800;
+	stroke-dasharray: 800;
+	stroke-dashoffset: 800;
 }
 
 .play {
-    animation: dash .8s ease-in-out forwards;
+	animation: dash 0.8s ease-in-out forwards;
 }
 
 @keyframes dash {
-    from {
-        stroke-dashoffset: 800;
-    }
+	from {
+		stroke-dashoffset: 800;
+	}
 
-    to {
-        stroke-dashoffset: 1600;
-    }
+	to {
+		stroke-dashoffset: 1600;
+	}
 }

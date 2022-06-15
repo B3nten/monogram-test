@@ -5,7 +5,7 @@ export function useAnimateIn({
 	triggerOnce = true,
 	delay = 0,
 	animation = 'in', // class to add
-	base = 'out' // startin class
+	base = 'out' // starting class
 } = {}) {
 	const [ref] = useInView({
 		threshold: threshold,
