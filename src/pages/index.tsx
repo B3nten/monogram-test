@@ -1,34 +1,37 @@
 import { Circle } from "@src/modules/index/Circle";
 import { useInView } from "react-intersection-observer";
+import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
 
 export default function Home() {
 
-  const [hero, heroInView] = useInView({ threshold: 1, triggerOnce: true });
-
-
+  const jsHeader = useAnimateIn();
+  const jsText = useAnimateIn();
+  const apiHeader = useAnimateIn();
+  const apiText = useAnimateIn();
+  const markupHeader = useAnimateIn();
+  const markupText = useAnimateIn();
+  const panelText = useAnimateIn();
+  const footerText = useAnimateIn();
   return (
     <>
       {/* Hero section */}
       <section>
         {/* Desktop */}
         <div className="hidden sm:flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-2 md:px-0">
-          <h1 ref={hero} className={`md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15] 
-          opacity-0 translate-y-28 transition duration-500
-          ${heroInView && '!translate-y-0 opacity-100'}`}>
+          <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
             jamstack
             <span className='bg-[url(/assets/text.webp)] bg-bottom bg-cover bg-clip-text text-transparent'> 101</span>
           </h1>
           <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
             <div>
-              <p className={`md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray
-              transition duration-500 opacity-0 translate-y-10 ${heroInView && '!translate-y-0 opacity-100'}`}>
+              <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
               </p>
               <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' />
             </div>
             <div>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className={`w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] [transform:rotateY(90deg)] transition duration-500 ${heroInView && '!rotate-0'}`} src='/assets/rectangle01.webp' />
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] [transform:rotateY(90deg)] transition duration-500' src='/assets/rectangle01.webp' />
                 <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
               </div>
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
@@ -58,8 +61,9 @@ export default function Home() {
       <section className='mt-10'>
         <div className="flex flex-col items-center px-4 space-y-[5vw] sm:space-y-10 md:space-y-12 lg:space-y-18 xl:space-y-20">
           <div className="absolute -z-10 px-2 md:px-4 2xl:px-0"><img className='' src='/assets/orange_square.webp' /></div>
-          <h2 className='text-white text-4xl md:text-6xl lg:text-8xl xl:text-[133px] font-black'>javascript</h2>
-          <p className='text-sm sm:text-lg text-white max-w-md md:max-w-[586px] md:leading-loose font-light'>Statically generated pages are brought to life with client-side JavaScript libraries and frameworks, such as Algolia and Next.js.</p>
+          <h2 ref={jsHeader} className='text-white text-4xl md:text-6xl lg:text-8xl xl:text-[133px] font-black 
+          '>javascript</h2>
+          <p ref={jsText} className='text-sm sm:text-lg text-white max-w-md md:max-w-[586px] md:leading-loose font-light '>Statically generated pages are brought to life with client-side JavaScript libraries and frameworks, such as Algolia and Next.js.</p>
           <img className='w-[50vw] md:w-[60vw] xl:w-auto' src='/assets/computer.webp' />
         </div>
       </section>;
@@ -103,8 +107,8 @@ export default function Home() {
               <img src='/assets/squiggly.svg' className='w-full' />
               <div className='bg-white basis-[110%]'></div>
             </div>
-            <h1 className='text-6xl lg:text-[133px] text-white font-black text-center'>api</h1>
-            <p className='max-w-[85%] md:max-w-[730px] lg:text-2xl text-white text-center mt-10 mb-16 lg:mb-40'>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
+            <h1 ref={apiHeader} className='text-6xl lg:text-[133px] text-white font-black text-center '>api</h1>
+            <p ref={apiText} className='max-w-[85%] md:max-w-[730px] lg:text-2xl text-white text-center mt-10 mb-16 lg:mb-40 '>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
             <div className="relative mx-auto px-4 lg:px-0">
               <img src='/assets/ball.webp' />
               <div className='absolute inset-0 lg:-inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full 
@@ -119,12 +123,12 @@ export default function Home() {
       {/* Markup section */}
       <section>
         <div className="hidden sm:flex flex-col items-start mt-10 p-1 sm:px-2 md:px-0">
-          <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
+          <h1 ref={markupHeader} className=' md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
             markup
           </h1>
           <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
             <div>
-              <p className='md:ml-[8vw] 2xl:ml-32 mt-5 text-sm sm:text-base lg:text-lg 2xl:text-2xl max-w-md sm:max-w-[549px] text-[#414141]'>
+              <p ref={markupText} className='md:ml-[8vw] 2xl:ml-32 mt-5 text-sm sm:text-base lg:text-lg 2xl:text-2xl max-w-md sm:max-w-[549px] text-[#414141]'>
                 When ready for deployment, a static-site generator such as Astro or Next.js is used to compile the website. The end result is a collection of pre-rendered HTML pages that can be delivered lightning-fast over a CDN like Vercel’s Edge Network.
               </p>
               {/* floating blocks */}
@@ -207,7 +211,7 @@ export default function Home() {
         <section className='flex flex-col items-center -translate-y-10 xl:-translate-y-[5.5rem]'>
           <div className='relative w-full max-w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
           [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))] scale-x-[1.01] md:scale-x-100'>
-            <h2 className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
+            <h2 ref={panelText} className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
             <div className='grid grid-cols-2 sm:grid-cols-4 sm:gap-4 mt-10 lg:mt-14 mb-16 lg:mb-24'>
               <Circle delay={500} />
               <Circle delay={800} />
@@ -219,7 +223,7 @@ export default function Home() {
               Search engines, business stakeholders, and end-users gauge a website’s value using metric tools like Google Lighthouse, which measures site performance, SEO, and accessibility.<br /><br />Performance is one of the most difficult scores to get to 100. This is especially true in a time when users demand JavaScript-heavy, highly-interactive web experiences.<br /><br />A Jamstack website, delivering SEO-friendly, lean {'&'} clean HTML in milliseconds, promises higher search-engine ranking and a more positive, responsive end-user experience.</p>
           </div>
           {/* Footer */}
-          <div className='relative space-y-5 mt-60 mb-48'>
+          <div ref={footerText} className='relative space-y-5 mt-60 mb-48'>
             <p className='text-2xl text-white text-center'>This is a design test by Benton Boychuk-Chorney for Monogram.</p>
             <img src='/assets/heart.svg' className='mx-auto' />
           </div>
@@ -242,3 +246,5 @@ function Block({ color, noScale }: { color: string, noScale?: boolean; }) {
   if (noScale) return <div className={`w-[21vw] h-[3.8vw] rounded-[.5vw] 2xl:w-[320px] 2xl:h-[57px] ${color}`}></div>;
   return <div className={`w-[32vw] h-[6vw] lg:w-[21vw] lg:h-[3.8vw] rounded-[.5vw] ${color}`}></div>;
 }
+
+

@@ -6,7 +6,8 @@ export function Circle({ delay = 0 }: { delay: number; }) {
     const [ref, animate] = useInView({ delay: delay, triggerOnce: true, threshold: .75 });
     const count = useRef(0);
     const counter = useRef<HTMLDivElement | null>(null);
-    // incrementer
+
+    // Incrementer sets a ref and directly mutates the dom for performance reasons.
     useEffect(() => {
         const interval = setInterval(() => {
             if (count.current > 99) {

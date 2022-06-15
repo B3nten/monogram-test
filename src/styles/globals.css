@@ -10,3 +10,11 @@ html,
 body {
     @apply overflow-x-hidden;
 }
+
+.out {
+    @apply transition duration-700 ease-out opacity-0 translate-y-16
+}
+
+.in {
+    @apply  !opacity-100 !translate-y-0
+}
