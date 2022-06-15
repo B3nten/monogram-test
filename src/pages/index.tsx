@@ -1,13 +1,12 @@
 import { Circle } from "@src/modules/index/Circle";
 import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
-import dynamic from 'next/dynamic';
+import { use3D } from "@src/common/hooks/use3D";
+import { Ball } from '@modules/index/Ball';
 
-// const Ball = dynamic(() => import('@src/modules/index/Ball'), {
-//   ssr: false,
-//   loading: () => <img src='/assets/ball.webp' />,
-// });
 
 export default function Home() {
+  // check if 3d is possible
+  const useThree = use3D();
 
   // Desktop or hybrid elements
   const jsHeader = useAnimateIn();
@@ -133,7 +132,7 @@ export default function Home() {
             <p ref={apiText} className='max-w-[85%] md:max-w-[730px] lg:text-2xl text-white text-center mt-10 mb-16 lg:mb-40 '>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
             <div className="relative mx-auto px-4 lg:px-0">
               <div className="mx-auto w-screen max-w-[914px] aspect-square">
-                {/* <Ball /> */}
+                {useThree && <Ball />}
               </div>
               <img src='/assets/ball.webp' className='hidden' />
               <div className='absolute inset-0 lg:-inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full 
