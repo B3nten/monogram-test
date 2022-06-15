@@ -44,7 +44,7 @@ export function Markup() {
                         </div>
                     </div>
                     {/* blocks */}
-                    <div className=''>
+                    <div aria-hidden="true">
                         <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
                             <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[68px] object-cover ' src='/assets/blocks.webp' alt='' />
                             <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] rounded-[68px] 2xl:mt-[-171px] object-cover object-right' src='/assets/blocks.webp' alt='' />
@@ -65,7 +65,8 @@ export function Markup() {
                     <p ref={mobileMarkupText} className='md:ml-[12vw] 2xl:ml-44 mt-5 text-base text-center sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
                     </p>
-                    <div className="mt-10 self-stretch mb-10">
+                    {/* Blocks */}
+                    <div aria-hidden="true" className="mt-10 self-stretch mb-10">
                         <div ref={mobileMarkupBlockA}>
                             <Block color="bg-[#0165B1] ml-[8vw] rotate-[-16.91deg]" />
                         </div>
@@ -92,12 +93,12 @@ export function Markup() {
 }
 
 function Block({ color, noScale }: { color: string, noScale?: boolean; }) {
+    // noScale used for display block elements under markup section
     if (noScale) return <div className={`w-[21vw] h-[3.8vw] rounded-[.5vw] 2xl:w-[320px] 2xl:h-[57px] ${color}`}></div>;
     return <div className={`w-[32vw] h-[6vw] lg:w-[21vw] lg:h-[3.8vw] rounded-[.5vw] ${color}`}></div>;
 }
 
 export function BlockStack() {
-
     return (
         <div className='overflow-hidden'>
             <div className="flex ml-[20vw] lg:ml-[36.5vw]">

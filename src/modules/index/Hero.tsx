@@ -17,7 +17,7 @@ export function Hero() {
                         </p>
                         <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' alt='' />
                     </div>
-                    <div>
+                    <div aria-hidden="true">
                         <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
                             <div className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]'>
                                 <Image width={280} height={629} src='/assets/rectangle01.webp' alt='' />
