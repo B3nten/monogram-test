@@ -38,7 +38,7 @@ export function Circle({ delay = 0 }: { delay: number; }) {
                 </g>
                 <defs>
                     <filter id="filter0_ddd_101_247" x="0" y="-1.90735e-06" width="338" height="338.001" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                         <feOffset />
                         <feGaussianBlur stdDeviation="30.5" />

@@ -2,6 +2,7 @@ import { Circle } from "@src/modules/index/Circle";
 import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
 import { use3D } from "@src/common/hooks/use3D";
 import { Ball } from '@modules/index/Ball';
+import Head from "next/head";
 
 
 export default function Home() {
@@ -34,6 +35,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Monogram Test - Benton</title>
+        <meta name="Benton's Monogram Test" content="This is a test page build by Benton Boychuuk-Chorney."></meta>
+      </Head>
       {/* Hero section */}
       <section>
         {/* Desktop */}
@@ -80,7 +85,9 @@ export default function Home() {
       {/* Javascript computer section */}
       <section className='mt-10'>
         <div className="flex flex-col items-center px-4 space-y-[5vw] sm:space-y-10 md:space-y-12 lg:space-y-18 xl:space-y-20">
-          <div className="absolute -z-10 px-2 md:px-4 2xl:px-0"><img className='' src='/assets/orange_square.webp' /></div>
+          <div className="absolute -z-10 px-2 md:px-4 2xl:px-0">
+            <img src='/assets/orange_square.webp' alt='' />
+          </div>
           <h2 ref={jsHeader} className='text-white text-4xl md:text-6xl lg:text-8xl xl:text-[133px] font-black 
           '>javascript</h2>
           <p ref={jsText} className='text-sm sm:text-lg text-white max-w-md md:max-w-[586px] md:leading-loose font-light '>Statically generated pages are brought to life with client-side JavaScript libraries and frameworks, such as Algolia and Next.js.</p>
