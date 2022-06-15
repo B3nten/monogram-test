@@ -4,7 +4,7 @@ import { OrbitControls, Environment } from "@react-three/drei";
 import { Model } from './Model';
 
 
-export function Ball() {
+export default function Ball() {
 
     return (
         <div className='mx-auto w-full max-w-[914px] aspect-square'>

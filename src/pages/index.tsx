@@ -1,6 +1,11 @@
 import { Circle } from "@src/modules/index/Circle";
 import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
-import { Ball } from "@src/modules/index/Ball";
+import dynamic from 'next/dynamic';
+
+const Ball = dynamic(() => import('@src/modules/index/Ball'), {
+  ssr: false,
+  loading: () => <img src='/assets/ball.webp' />
+});
 
 export default function Home() {
 
