@@ -36,8 +36,8 @@ export function Audit() {
 					</div>
 					<p
 						ref={panelText}
-						className="relative mx-auto mb-24 max-w-3xl bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text text-base text-transparent
-            md:text-2xl lg:mb-48 lg:text-[26px] lg:leading-10"
+						className="relative mx-auto mb-24 max-w-3xl bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text text-base font-bold text-transparent md:text-2xl
+            md:font-normal lg:mb-48 lg:text-[26px] lg:leading-10"
 					>
 						Search engines, business stakeholders, and end-users gauge a website’s value using
 						metric tools like Google Lighthouse, which measures site performance, SEO, and
