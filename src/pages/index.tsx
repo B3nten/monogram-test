@@ -1,23 +1,32 @@
+import { Circle } from "@src/modules/index/Circle";
+import { useInView } from "react-intersection-observer";
 
 export default function Home() {
+
+  const [hero, heroInView] = useInView({ threshold: 1, triggerOnce: true });
+
+
   return (
     <>
       {/* Hero section */}
       <section>
         {/* Desktop */}
         <div className="hidden sm:flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-2 md:px-0">
-          <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
+          <h1 ref={hero} className={`md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15] 
+          rotate-12 opacity-0 translate-y-28 transition duration-500
+          ${heroInView && '!translate-y-0 opacity-100 rotate-0'}`}>
             jamstack
             <span className='bg-[url(/assets/text.webp)] bg-bottom bg-cover bg-clip-text text-transparent'> 101</span>
           </h1>
           <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
             <div>
-              <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
+              <p className={`md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray
+              transition duration-500`}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
               </p>
               <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' />
             </div>
-            <div className=''>
+            <div>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
                 <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
                 <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
@@ -185,9 +194,7 @@ export default function Home() {
           <Block color='bg-[#FEC05C]/20' />
           <Block color='bg-[#D12510]/20' />
         </div>
-
       </div>
-
 
       {/* Footer section */}
       <div className="relative bg-brand-bg px-0 sm:px-5 2xl:px-0 w-screen">
@@ -202,10 +209,10 @@ export default function Home() {
           [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))] scale-x-[1.01] md:scale-x-100'>
             <h2 className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
             <div className='grid grid-cols-2 sm:grid-cols-4 sm:gap-4 mt-10 lg:mt-14 mb-16 lg:mb-24'>
-              <Circle />
-              <Circle />
-              <Circle />
-              <Circle />
+              <Circle delay={500} />
+              <Circle delay={800} />
+              <Circle delay={1100} />
+              <Circle delay={1400} />
             </div>
             <p className='relative mx-auto text-base md:text-2xl lg:text-[26px] max-w-3xl text-transparent lg:leading-10 mb-24 lg:mb-48
             bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text'>
@@ -222,14 +229,14 @@ export default function Home() {
   );
 };
 
-function Circle() {
-  return <div className='relative'>
-    <img src='/assets/circle.svg' className='scale-125' />
-    <div className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>
-      100
-    </div>
-  </div>;
-}
+// function Circle() {
+//   return <div className='relative'>
+//     <img src='/assets/circle.svg' className='scale-125' />
+//     <div className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>
+//       100
+//     </div>
+//   </div>;
+// }
 
 function Block({ color, noScale }: { color: string, noScale?: boolean; }) {
   if (noScale) return <div className={`w-[21vw] h-[3.8vw] rounded-[.5vw] 2xl:w-[320px] 2xl:h-[57px] ${color}`}></div>;
