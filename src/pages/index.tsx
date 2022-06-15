@@ -28,7 +28,7 @@ export default function Home() {
             </div>
             <div>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
+                <img className={`w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] [transform:rotateY(90deg)] transition duration-500 ${heroInView && '!rotate-0'}`} src='/assets/rectangle01.webp' />
                 <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
               </div>
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>

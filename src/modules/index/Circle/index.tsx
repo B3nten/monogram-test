@@ -1,30 +1,29 @@
-import { useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useInView } from 'react-intersection-observer';
 import styles from './Circle.module.css';
 
 export function Circle({ delay = 0 }: { delay: number; }) {
     const [ref, animate] = useInView({ delay: delay, triggerOnce: true, threshold: .75 });
-    const [counter, setCounter] = useState(0);
+    const count = useRef(0);
+    const counter = useRef<HTMLDivElement | null>(null);
     // incrementer
     useEffect(() => {
         const interval = setInterval(() => {
-            setCounter((c: number): number => {
-                if (c > 99) {
-                    clearInterval(interval);
-                    return c;
-                }
-                if (animate) {
-                    return c + 1;
-                }
-                return 0;
-            });
+            if (count.current > 99) {
+                clearInterval(interval);
+                return;
+            }
+            if (animate && counter.current) {
+                count.current++;
+                counter.current.innerText = count.current.toString();
+            }
         }, 6);
         return () => clearInterval(interval);
     }, [animate]);
     return (
         <div className="relative inline-block" ref={ref}>
-            <div className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>
-                {counter}
+            <div ref={counter} className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>
+                0
             </div>
             <svg className='[transform:translateZ(0)_scale(1.25)]' width="100%" height="100%" viewBox="0 0 338 338" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.8" filter="url(#filter0_ddd_101_247)">
