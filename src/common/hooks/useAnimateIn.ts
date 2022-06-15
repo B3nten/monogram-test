@@ -1,14 +1,20 @@
 import { useInView } from 'react-intersection-observer'
 
-export function useAnimateIn(delay = 5, triggerOnce = true) {
+export function useAnimateIn({
+	threshold = 1,
+	triggerOnce = true,
+	delay = 0,
+	animation = 'in',
+	base = 'out'
+} = {}) {
 	const [ref] = useInView({
-		threshold: 1,
+		threshold: threshold,
 		triggerOnce: triggerOnce,
 		delay: delay,
 		onChange: (inView, entry) => {
-			entry.target.classList.add('out')
+			entry.target.classList.add(base)
 			if (inView) {
-				entry.target.classList.add('in')
+				entry.target.classList.add(animation)
 			}
 		}
 	})

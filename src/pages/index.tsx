@@ -1,17 +1,32 @@
 import { Circle } from "@src/modules/index/Circle";
-import { useInView } from "react-intersection-observer";
 import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
 
 export default function Home() {
 
+  // Desktop or hybrid elements
   const jsHeader = useAnimateIn();
   const jsText = useAnimateIn();
   const apiHeader = useAnimateIn();
   const apiText = useAnimateIn();
   const markupHeader = useAnimateIn();
   const markupText = useAnimateIn();
-  const panelText = useAnimateIn();
-  const footerText = useAnimateIn();
+  const markupBlockA = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const markupBlockB = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const markupBlockC = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const panelHeader = useAnimateIn();
+  const panelText = useAnimateIn({ threshold: .25 });
+  const footerText = useAnimateIn({ threshold: .5 });
+
+  // Mobile elements
+  const mobileMarkupHeader = useAnimateIn();
+  const mobileMarkupText = useAnimateIn();
+  const mobileMarkupBlockA = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const mobileMarkupBlockB = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const mobileMarkupBlockC = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const mobileMarkupBlockD = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const mobileMarkupBlockE = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+  const mobileMarkupBlockF = useAnimateIn({ animation: 'blockAnimation', base: 'blockBase', threshold: .5 });
+
   return (
     <>
       {/* Hero section */}
@@ -31,7 +46,7 @@ export default function Home() {
             </div>
             <div>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] [transform:rotateY(90deg)] transition duration-500' src='/assets/rectangle01.webp' />
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' />
                 <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' />
               </div>
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
@@ -133,9 +148,15 @@ export default function Home() {
               </p>
               {/* floating blocks */}
               <div className="mt-10 lg:mt-20 xl:mt-32">
-                <Block noScale color="bg-[#0165B1] ml-[16.4vw] 2xl:ml-[248px] rotate-[-16.91deg]" />
-                <Block noScale color="bg-[#D12510] mt-32 ml-[3.8vw] 2xl:ml-[58px] rotate-[14.16deg]" />
-                <Block noScale color="bg-[#FEC05C] mt-10 ml-[25.6vw] 2xl:ml-[416px] -translate-y-20 rotate-[-58.55deg]" />
+                <div ref={markupBlockA}>
+                  <Block noScale color="bg-[#0165B1] ml-[16.4vw] 2xl:ml-[248px] rotate-[-16.91deg]" />
+                </div>
+                <div ref={markupBlockB}>
+                  <Block noScale color="bg-[#D12510] mt-32 ml-[3.8vw] 2xl:ml-[58px] rotate-[14.16deg]" />
+                </div>
+                <div ref={markupBlockC}>
+                  <Block noScale color="bg-[#FEC05C] mt-10 ml-[25.6vw] 2xl:ml-[416px] -translate-y-20 rotate-[-58.55deg]" />
+                </div>
               </div>
             </div>
             {/* blocks */}
@@ -154,19 +175,31 @@ export default function Home() {
         {/* Mobile View */}
         <div className='p-2 sm:hidden'>
           <div className="flex flex-col items-center justify-start">
-            <h1 className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
+            <h1 ref={mobileMarkupHeader} className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
               markup
             </h1>
-            <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-base text-center sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
+            <p ref={mobileMarkupHeader} className='md:ml-[12vw] 2xl:ml-44 mt-5 text-base text-center sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
             </p>
             <div className="mt-10 self-stretch mb-10">
-              <Block color="bg-[#0165B1] ml-[8vw] rotate-[-16.91deg]" />
-              <Block color="bg-[#D12510] mt-10 ml-[25vw] rotate-[14.16deg]" />
-              <Block color="bg-[#FEC05C] ml-[60vw] rotate-[-35.55deg]" />
-              <Block color="bg-[#97B1B2] mt-8 ml-[10vw] rotate-[-18.16deg]" />
-              <Block color="bg-[#0165B1] mt-16 ml-[17vw] rotate-[10deg]" />
-              <Block color="bg-[#D12510] mt-8 ml-[56vw] rotate-[108deg] -translate-y-10" />
+              <div ref={mobileMarkupBlockA}>
+                <Block color="bg-[#0165B1] ml-[8vw] rotate-[-16.91deg]" />
+              </div>
+              <div ref={mobileMarkupBlockB}>
+                <Block color="bg-[#D12510] mt-10 ml-[25vw] rotate-[14.16deg]" />
+              </div>
+              <div ref={mobileMarkupBlockC}>
+                <Block color="bg-[#FEC05C] ml-[60vw] rotate-[-35.55deg]" />
+              </div>
+              <div ref={mobileMarkupBlockD}>
+                <Block color="bg-[#97B1B2] mt-8 ml-[10vw] rotate-[-18.16deg]" />
+              </div>
+              <div ref={mobileMarkupBlockE}>
+                <Block color="bg-[#0165B1] mt-16 ml-[17vw] rotate-[10deg]" />
+              </div>
+              <div ref={mobileMarkupBlockF}>
+                <Block color="bg-[#D12510] mt-8 ml-[56vw] rotate-[108deg] -translate-y-10" />
+              </div>
             </div>
           </div>
         </div>
@@ -200,7 +233,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Footer section */}
+      {/* Panel section */}
       <div className="relative bg-brand-bg px-0 sm:px-5 2xl:px-0 w-screen">
         <div className='absolute grid grid-cols-3 lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
           <div className='border-l border-white/30 border-dashed'></div>
@@ -211,36 +244,27 @@ export default function Home() {
         <section className='flex flex-col items-center -translate-y-10 xl:-translate-y-[5.5rem]'>
           <div className='relative w-full max-w-[1204px] rounded-[68px] p-10 backdrop-blur-[128px] border border-[#e2ffd125]
           [@supports(backdrop-filter:blur(0))]:backdrop-blur-[128px] [@supports(backdrop-filter:blur(0))]:[background:linear-gradient(-24.39deg,rgba(255,255,255,0.024)_35.54%,rgba(123,245,93,.15)_75.25%)] [background:linear-gradient(#afbdac_-15%,#263822_20%,rgba(255,255,255,.05))] scale-x-[1.01] md:scale-x-100'>
-            <h2 ref={panelText} className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
+            <h2 ref={panelHeader} className='md:mt-12 lg:mt-20 2xl:mt-24 text-center text-5xl sm:text-6xl lg:text-7xl font-black text-[#EFFFE2]'>top audit scores</h2>
             <div className='grid grid-cols-2 sm:grid-cols-4 sm:gap-4 mt-10 lg:mt-14 mb-16 lg:mb-24'>
               <Circle delay={500} />
               <Circle delay={800} />
               <Circle delay={1100} />
               <Circle delay={1400} />
             </div>
-            <p className='relative mx-auto text-base md:text-2xl lg:text-[26px] max-w-3xl text-transparent lg:leading-10 mb-24 lg:mb-48
+            <p ref={panelText} className='relative mx-auto text-base md:text-2xl lg:text-[26px] max-w-3xl text-transparent lg:leading-10 mb-24 lg:mb-48
             bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text'>
               Search engines, business stakeholders, and end-users gauge a website’s value using metric tools like Google Lighthouse, which measures site performance, SEO, and accessibility.<br /><br />Performance is one of the most difficult scores to get to 100. This is especially true in a time when users demand JavaScript-heavy, highly-interactive web experiences.<br /><br />A Jamstack website, delivering SEO-friendly, lean {'&'} clean HTML in milliseconds, promises higher search-engine ranking and a more positive, responsive end-user experience.</p>
           </div>
           {/* Footer */}
           <div ref={footerText} className='relative space-y-5 mt-60 mb-48'>
             <p className='text-2xl text-white text-center'>This is a design test by Benton Boychuk-Chorney for Monogram.</p>
-            <img src='/assets/heart.svg' className='mx-auto' />
+            <img src='/assets/heart.svg' className='mx-auto animate-pulse' />
           </div>
         </section>
       </div >
     </>
   );
 };
-
-// function Circle() {
-//   return <div className='relative'>
-//     <img src='/assets/circle.svg' className='scale-125' />
-//     <div className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>
-//       100
-//     </div>
-//   </div>;
-// }
 
 function Block({ color, noScale }: { color: string, noScale?: boolean; }) {
   if (noScale) return <div className={`w-[21vw] h-[3.8vw] rounded-[.5vw] 2xl:w-[320px] 2xl:h-[57px] ${color}`}></div>;

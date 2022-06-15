@@ -12,9 +12,17 @@ body {
 }
 
 .out {
-    @apply transition duration-700 ease-out opacity-0 translate-y-16
+    @apply transition duration-700 ease-out opacity-0 translate-y-24
 }
 
 .in {
     @apply  !opacity-100 !translate-y-0
+}
+
+.blockBase {
+    @apply rotate-45 opacity-0 transition duration-700
+}
+
+.blockAnimation {
+    @apply  !rotate-0 !opacity-100
 }
