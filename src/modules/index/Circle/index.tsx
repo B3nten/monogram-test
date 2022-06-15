@@ -16,16 +16,21 @@ export function Circle({ delay = 0 }: { delay: number; }) {
             }
             if (animate && counter.current) {
                 count.current++;
+                // directly mutate dom for performance, not sure if it helps much.
                 counter.current.innerText = count.current.toString();
             }
         }, 6);
+        // Cleanup
         return () => clearInterval(interval);
     }, [animate]);
     return (
         <div className="relative inline-block" ref={ref}>
+
+            {/* COUNTER COMPONENT */}
             <div ref={counter} className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>
                 0
             </div>
+
             <svg className='[transform:translateZ(0)_scale(1.25)]' width="100%" height="100%" viewBox="0 0 338 338" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.8" filter="url(#filter0_ddd_101_247)">
                     {/* path css & set play class when animate (inview) = true */}

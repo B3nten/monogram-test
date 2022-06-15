@@ -1,5 +1,6 @@
 import { Circle } from "@src/modules/index/Circle";
 import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
+import { Ball } from "@src/modules/index/Ball";
 
 export default function Home() {
 
@@ -84,15 +85,16 @@ export default function Home() {
       </section>;
 
       {/* Logo section */}
-      <div className="relative bg-brand-bg mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] -z-30 w-screen">
+      <div className="relative  mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] w-screen">
+        {/* Display grid */}
+        <div className='absolute inset-0 w-screen bg-brand-bg -z-30'></div>
+        <div className='absolute grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
+          <div className='border-l border-white/30 border-dashed'></div>
+          <div className='border-x border-white/30 border-dashed'></div>
+          <div className='hidden sm:block border-r border-white/30 border-dashed'></div>
+          <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
+        </div>
         <section>
-          {/* display grid */}
-          <div className='absolute grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
-            <div className='border-l border-white/30 border-dashed'></div>
-            <div className='border-x border-white/30 border-dashed'></div>
-            <div className='hidden sm:block border-r border-white/30 border-dashed'></div>
-            <div className='hidden lg:block border-r border-white/30 border-dashed'></div>
-          </div>
           {/* Logo grid */}
           <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 [&>div>img]:scale-125'>
             <div>
@@ -125,7 +127,10 @@ export default function Home() {
             <h1 ref={apiHeader} className='text-6xl lg:text-[133px] text-white font-black text-center '>api</h1>
             <p ref={apiText} className='max-w-[85%] md:max-w-[730px] lg:text-2xl text-white text-center mt-10 mb-16 lg:mb-40 '>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
             <div className="relative mx-auto px-4 lg:px-0">
-              <img src='/assets/ball.webp' />
+              <div className="mx-auto w-screen max-w-[914px] aspect-square">
+                <Ball />
+              </div>
+              <img src='/assets/ball.webp' className='hidden' />
               <div className='absolute inset-0 lg:-inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full 
               lg:blur-[128px] blur-3xl -translate-y-5 lg:-translate-y-10 -translate-x-5 lg:-translate-x-10'></div>
               <div className='absolute inset-2 lg:inset-0 bg-white -z-10 rounded-full blur-xl lg:blur-2xl -translate-y-4 lg:-translate-y-8 -translate-x-4 lg:-translate-x-8'></div>

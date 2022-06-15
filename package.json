@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.13.0",
+    "@react-three/fiber": "^8.0.26",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-intersection-observer": "^9.3.0"
+    "react-intersection-observer": "^9.3.0",
+    "react-scroll-parallax": "^3.2.0"
   },
   "devDependencies": {
     "@monogram/prettier-config": "^0.2.0",
