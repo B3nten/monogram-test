@@ -1,3 +1,4 @@
+import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
 import Head from "next/head";
 import { API } from "@src/modules/index/API";
 import { Hero } from "@src/modules/index/Hero";
@@ -6,6 +7,8 @@ import { Audit } from "@src/modules/index/Audit";
 import { JS } from "@src/modules/index/JS";
 
 export default function Home() {
+
+
   return (
     <>
       <Head>

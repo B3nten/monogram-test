@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function Hero() {
 
     return (
@@ -19,12 +17,8 @@ export function Hero() {
                     </div>
                     <div aria-hidden="true">
                         <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                            <div className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]'>
-                                <Image width={280} height={629} src='/assets/rectangle01.webp' alt='' />
-                            </div>
-                            <div className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]'>
-                                <Image width={280} height={670} src='/assets/rectangle02.webp' alt='' />
-                            </div >
+                            <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px]' src='/assets/rectangle01.webp' alt='' />
+                            <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] 2xl:mt-[-171px]' src='/assets/rectangle02.webp' alt='' />
                         </div>
                         <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
                             <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
