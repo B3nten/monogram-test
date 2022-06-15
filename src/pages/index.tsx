@@ -79,7 +79,7 @@ export default function Home() {
           <h2 ref={jsHeader} className='text-white text-4xl md:text-6xl lg:text-8xl xl:text-[133px] font-black 
           '>javascript</h2>
           <p ref={jsText} className='text-sm sm:text-lg text-white max-w-md md:max-w-[586px] md:leading-loose font-light '>Statically generated pages are brought to life with client-side JavaScript libraries and frameworks, such as Algolia and Next.js.</p>
-          <img className='w-[50vw] md:w-[60vw] xl:w-auto' src='/assets/computer.webp' />
+          <img className='w-[50vw] md:w-[60vw] xl:w-auto relative z-10' src='/assets/computer.webp' />
         </div>
       </section>;
 
@@ -178,7 +178,7 @@ export default function Home() {
             <h1 ref={mobileMarkupHeader} className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
               markup
             </h1>
-            <p ref={mobileMarkupHeader} className='md:ml-[12vw] 2xl:ml-44 mt-5 text-base text-center sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
+            <p ref={mobileMarkupText} className='md:ml-[12vw] 2xl:ml-44 mt-5 text-base text-center sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
             </p>
             <div className="mt-10 self-stretch mb-10">
