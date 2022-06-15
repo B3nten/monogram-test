@@ -88,18 +88,19 @@ export default function Home() {
           <div className="absolute -z-10 px-2 md:px-4 2xl:px-0">
             <img src='/assets/orange_square.webp' alt='' />
           </div>
+          <img className='hidden lg:block absolute h-[30vw] w-[16vw] 2xl:w-auto 2xl:h-auto right-[9.5vw] 2xl:right-36 top-[10.5vw] 2xl:top-40' src='/assets/jsarrow.svg' />
           <h2 ref={jsHeader} className='text-white text-4xl md:text-6xl lg:text-8xl xl:text-[133px] font-black 
           '>javascript</h2>
           <p ref={jsText} className='text-sm sm:text-lg text-white max-w-md md:max-w-[586px] md:leading-loose font-light '>Statically generated pages are brought to life with client-side JavaScript libraries and frameworks, such as Algolia and Next.js.</p>
           <img className='w-[50vw] md:w-[60vw] xl:w-auto relative z-10' src='/assets/computer.webp' alt="A computer with computer code displayed" />
         </div>
-      </section>;
+      </section>
 
       {/* Logo section */}
       <div className="relative  mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] w-screen">
         {/* Display grid */}
         <div className='absolute inset-0 w-screen bg-brand-bg -z-30'></div>
-        <div className='absolute grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0'>
+        <div className='absolute grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0 -z-20'>
           <div className='border-l border-white/30 border-dashed'></div>
           <div className='border-x border-white/30 border-dashed'></div>
           <div className='hidden sm:block border-r border-white/30 border-dashed'></div>
@@ -180,8 +181,8 @@ export default function Home() {
             {/* blocks */}
             <div className=''>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
-                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[68px]' src='/assets/blocks.webp' alt='' />
-                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] rounded-[68px] 2xl:mt-[-171px]' src='/assets/blocks.webp' alt='' />
+                <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[68px] object-cover ' src='/assets/blocks.webp' alt='' />
+                <img className='w-[18vw] h-[44vw] 2xl:w-[280px] 2xl:h-[670px] mt-[-11vw] rounded-[68px] 2xl:mt-[-171px] object-cover object-right' src='/assets/blocks.webp' alt='' />
               </div>
               <div className='flex space-x-[2.5vw] 2xl:space-x-[40px] ml-[10vw] 2xl:ml-40 opacity-0 [@supports(backdrop-filter:blur(0))]:opacity-100'>
                 <div className='w-[18vw] h-[32vw] 2xl:w-[280px] 2xl:h-[479px] rounded-[5vw] 2xl:rounded-[68px] mt-[-20vw] 2xl:mt-[-300px] shrink-0 bg-white/30 backdrop-blur-2xl' />
