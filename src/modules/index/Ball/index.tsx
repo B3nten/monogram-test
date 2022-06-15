@@ -9,7 +9,7 @@ export default function Ball() {
     return (
         <div className='mx-auto w-full max-w-[914px] aspect-square'>
             <Canvas>
-                <Suspense fallback={null}>
+                <Suspense fallback={<img src='/assets/ball.webp' />}>
                     <Model />
                 </Suspense>
                 <OrbitControls
