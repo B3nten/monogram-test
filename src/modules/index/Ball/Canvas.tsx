@@ -9,7 +9,7 @@ export default function Three() {
     return (
         <div className='mx-auto w-full max-w-[914px] aspect-square'>
             <Canvas>
-                <Suspense fallback={<img src='/assets/ball.webp' />}>
+                <Suspense fallback={null}>
                     <Model />
                 </Suspense>
                 <OrbitControls

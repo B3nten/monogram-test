@@ -6,8 +6,7 @@ export function use3D() {
 	useEffect(() => {
 		;(async () => {
 			const gpuTier = await getGPUTier()
-			console.log(gpuTier)
-			if (gpuTier.tier > 0) setUseThree(true)
+			if (gpuTier && gpuTier.tier && gpuTier.tier > 0) setUseThree(true)
 		})()
 	}, [])
 	return useThree
