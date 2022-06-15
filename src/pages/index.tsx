@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Monogram Test - Benton</title>
-        <meta name="description" content="This is a test page build by Benton Boychuk-Chorney."></meta>
+        <meta name="Benton's Monogram Test" content="This is a test page build by Benton Boychuuk-Chorney."></meta>
       </Head>
       {/* Hero section */}
       <Hero />

@@ -22,7 +22,7 @@ export function API() {
             <section>
                 {/* Logo grid */}
                 <div className='relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 pb-4 max-w-7xl mx-auto px-4 sm:px-10 
-                [&>div>img]:[transform:translateZ(0)_scale(1.25)] -z-20' aria-hidden="true">
+                [&>div>img]:[transform:translateZ(0)_scale(1.25)] -z-20'>
                     <div>
                         <Parallax speed={-20}>
                             <img className='mt-32 sm:mt-72 md:mt-96 ' src='/assets/logos/react.svg' alt='React.js logo' />
