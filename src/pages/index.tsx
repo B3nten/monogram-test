@@ -109,7 +109,7 @@ export default function Home() {
 
       {/* Markup section */}
       <section>
-        <div className="hidden sm:flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-2 md:px-0">
+        <div className="hidden sm:flex flex-col items-start mt-10 p-1 sm:px-2 md:px-0">
           <h1 className='md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
             markup
           </h1>
@@ -118,7 +118,14 @@ export default function Home() {
               <p className='md:ml-[8vw] 2xl:ml-32 mt-5 text-sm sm:text-base lg:text-lg 2xl:text-2xl max-w-md sm:max-w-[549px] text-[#414141]'>
                 When ready for deployment, a static-site generator such as Astro or Next.js is used to compile the website. The end result is a collection of pre-rendered HTML pages that can be delivered lightning-fast over a CDN like Vercel’s Edge Network.
               </p>
+              {/* floating blocks */}
+              <div className="mt-10 lg:mt-20 xl:mt-32">
+                <Block noScale color="bg-[#0165B1] ml-[16.4vw] 2xl:ml-[248px] rotate-[-16.91deg]" />
+                <Block noScale color="bg-[#D12510] mt-32 ml-[3.8vw] 2xl:ml-[58px] rotate-[14.16deg]" />
+                <Block noScale color="bg-[#FEC05C] mt-10 ml-[25.6vw] 2xl:ml-[416px] -translate-y-20 rotate-[-58.55deg]" />
+              </div>
             </div>
+            {/* blocks */}
             <div className=''>
               <div className='flex space-x-[3vw] 2xl:space-x-[46px] [@media_screen_and_(max-width:1350px)]:mt-32 [@media_screen_and_(max-width:700px)]:mt-12'>
                 <img className='w-[18vw] h-[42vw] 2xl:w-[280px] 2xl:h-[629px] rounded-[68px]' src='/assets/blocks.webp' />
@@ -132,14 +139,22 @@ export default function Home() {
           </div>
         </div>
         {/* Mobile View */}
-        <div className='p-2 mt-10 sm:hidden min-h-screen'>
+        <div className='p-2 sm:hidden'>
           <div className="flex flex-col items-center justify-start">
             <h1 className='text-7xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
               markup
             </h1>
-            <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
+            <p className='md:ml-[12vw] 2xl:ml-44 mt-5 text-base text-center sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
             </p>
+            <div className="mt-10 self-stretch mb-10">
+              <Block color="bg-[#0165B1] ml-[8vw] rotate-[-16.91deg]" />
+              <Block color="bg-[#D12510] mt-10 ml-[25vw] rotate-[14.16deg]" />
+              <Block color="bg-[#FEC05C] ml-[60vw] rotate-[-35.55deg]" />
+              <Block color="bg-[#97B1B2] mt-8 ml-[10vw] rotate-[-18.16deg]" />
+              <Block color="bg-[#0165B1] mt-16 ml-[17vw] rotate-[10deg]" />
+              <Block color="bg-[#D12510] mt-8 ml-[56vw] rotate-[108deg] -translate-y-10" />
+            </div>
           </div>
         </div>
       </section>
@@ -192,7 +207,7 @@ export default function Home() {
               <Circle />
               <Circle />
             </div>
-            <p className='relative mx-auto text-lg md:text-2xl lg:text-[26px] max-w-3xl text-transparent lg:leading-10 mb-24 lg:mb-48
+            <p className='relative mx-auto text-base md:text-2xl lg:text-[26px] max-w-3xl text-transparent lg:leading-10 mb-24 lg:mb-48
             bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text'>
               Search engines, business stakeholders, and end-users gauge a website’s value using metric tools like Google Lighthouse, which measures site performance, SEO, and accessibility.<br /><br />Performance is one of the most difficult scores to get to 100. This is especially true in a time when users demand JavaScript-heavy, highly-interactive web experiences.<br /><br />A Jamstack website, delivering SEO-friendly, lean {'&'} clean HTML in milliseconds, promises higher search-engine ranking and a more positive, responsive end-user experience.</p>
           </div>
@@ -216,6 +231,7 @@ function Circle() {
   </div>;
 }
 
-function Block({ color }: { color: string; }) {
+function Block({ color, noScale }: { color: string, noScale?: boolean; }) {
+  if (noScale) return <div className={`w-[21vw] h-[3.8vw] rounded-[.5vw] 2xl:w-[320px] 2xl:h-[57px] ${color}`}></div>;
   return <div className={`w-[32vw] h-[6vw] lg:w-[21vw] lg:h-[3.8vw] rounded-[.5vw] ${color}`}></div>;
 }
