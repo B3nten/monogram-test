@@ -7,18 +7,18 @@ export function Circle({ delay = 0 }: { delay: number; }) {
     const [counter, setCounter] = useState(0);
     // incrementer
     useEffect(() => {
-        let timeout: undefined | ReturnType<typeof setTimeout>;
-        if (counter < 100 && animate) {
-            timeout = setTimeout(() => {
-                setCounter(counter + 1);
-            }, 5);
-        }
-        return () => {
-            if (timeout) {
-                clearTimeout(timeout);
-            }
-        };
-    }, [counter, animate]);
+        const interval = setInterval(() => {
+            setCounter((c: number): number => {
+                if (c > 99) {
+                    clearInterval(interval);
+                    return c;
+                }
+                return c = c + 1;
+            });
+        }, 6);
+
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div className="relative inline-block" ref={ref}>
             <div className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>

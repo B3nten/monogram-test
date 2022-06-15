@@ -13,15 +13,15 @@ export default function Home() {
         {/* Desktop */}
         <div className="hidden sm:flex flex-col items-start mt-10 md:mt-20 lg:mt-36 p-1 sm:px-2 md:px-0">
           <h1 ref={hero} className={`md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15] 
-          rotate-12 opacity-0 translate-y-28 transition duration-500
-          ${heroInView && '!translate-y-0 opacity-100 rotate-0'}`}>
+          opacity-0 translate-y-28 transition duration-500
+          ${heroInView && '!translate-y-0 opacity-100'}`}>
             jamstack
             <span className='bg-[url(/assets/text.webp)] bg-bottom bg-cover bg-clip-text text-transparent'> 101</span>
           </h1>
           <div className='grid grid-cols-2 mt-7 gap-4 lg:gap-8'>
             <div>
               <p className={`md:ml-[12vw] 2xl:ml-44 mt-5 text-sm sm:text-base lg:text-lg max-w-md sm:max-w-[549px] text-brand-gray
-              transition duration-500`}>
+              transition duration-500 opacity-0 translate-y-10 ${heroInView && '!translate-y-0 opacity-100'}`}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus sit.
               </p>
               <img className='hidden [@media_screen_and_(min-width:430px)]:block w-[10vw] lg:w-auto mt-24 mx-auto' src='/assets/mouseline.svg' />
