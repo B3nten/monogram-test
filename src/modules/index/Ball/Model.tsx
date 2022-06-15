@@ -13,9 +13,9 @@ export function Model(props) {
             const mouseX = (e.clientX - x) / x;
             const mouseY = (e.clientY - y) / x;
             //@ts-ignore
-            group.current.rotation.x = (mouseY * .3) + .6;
+            group.current.rotation.x = (mouseY * .3) + 0;
             //@ts-ignore
-            group.current.rotation.y = (mouseX * .2) - 1;
+            group.current.rotation.y = (mouseX * .2) - 1.6;
         }
         document.addEventListener('mousemove', foo);
         return () => {
@@ -25,7 +25,7 @@ export function Model(props) {
     //@ts-ignore
     const { nodes, materials } = useGLTF("/assets/models/Ball.glb");
     return (
-        <group rotation={[.6, -1, .8]} ref={group} {...props} dispose={null}>
+        <group rotation={[0, -1.6, 0]} ref={group} {...props} dispose={null}>
             <group scale={(viewport.width / 2.53)}>
                 <mesh
                     castShadow

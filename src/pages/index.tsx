@@ -1,13 +1,13 @@
 import { Circle } from "@src/modules/index/Circle";
 import { useAnimateIn } from "@src/common/hooks/useAnimateIn";
-import { use3D } from "@src/common/hooks/use3D";
+import { useGPU } from "@src/common/hooks/useGPU";
 import { Ball } from '@modules/index/Ball';
 import Head from "next/head";
 
 
 export default function Home() {
   // check if 3d is possible
-  const useThree = use3D();
+  const gpu = useGPU();
 
   // Desktop or hybrid elements
   const jsHeader = useAnimateIn();
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Logo section */}
-      <div className="relative  mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] w-screen">
+      <div className="relative  mt-[-15rem] sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem] w-full">
         {/* Display grid */}
         <div className='absolute inset-0 w-screen bg-brand-bg -z-30'></div>
         <div className='absolute grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 max-w-[1350px] mx-auto px-4 sm:px-10 inset-0 -z-20'>
@@ -138,24 +138,24 @@ export default function Home() {
             </div>
             <h1 ref={apiHeader} className='text-6xl lg:text-[133px] text-white font-black text-center '>api</h1>
             <p ref={apiText} className='max-w-[85%] md:max-w-[730px] lg:text-2xl text-white text-center mt-10 mb-16 lg:mb-40 '>At build time, a Jamstack website uses data from one or more APIs to generate markup. These APIs can be a headless CMS like Prismic, a database like Supabase, or even a local JSON file!</p>
-            <div className="relative mx-auto px-4 lg:px-0">
-              <div className="mx-auto w-screen max-w-[914px] aspect-square">
+            <div className="relative mx-auto lg:px-0">
+              <div className="mx-auto w-full max-w-[914px] aspect-square">
                 {/* // Render ball loader if GPU is strong enough  */}
-                {useThree && <Ball />}
+                {!gpu.isMobile && gpu.tier > 1 && <Ball />}
                 {/* Or else render the image */}
-                {!useThree && <img src='/assets/ball.webp' alt='' />}
+                {(gpu.isMobile || gpu.tier < 2) && <img src='/assets/ball.webp' alt='' className='px-2' />}
               </div>
               <div className='absolute inset-0 lg:-inset-2 bg-gradient-to-tr from-blue-600 to-purple-700 -z-10 rounded-full 
               lg:blur-[128px] blur-3xl -translate-y-5 lg:-translate-y-10 -translate-x-5 lg:-translate-x-10'></div>
               <div className='absolute inset-2 lg:inset-0 bg-white -z-10 rounded-full blur-xl lg:blur-2xl -translate-y-4 lg:-translate-y-8 -translate-x-4 lg:-translate-x-8'></div>
             </div>
-          </div>
+          </div >
 
-        </section>
-      </div>
+        </section >
+      </div >
 
       {/* Markup section */}
-      <section>
+      < section >
         <div className="hidden sm:flex flex-col items-start mt-10 p-1 sm:px-2 md:px-0">
           <h1 ref={markupHeader} className=' md:ml-[8vw] 2xl:ml-32 text-5xl sm:text-8xl lg:text-[133px] font-black tracking-tight leading-[1.15]'>
             markup
@@ -190,7 +190,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div>;
         {/* Mobile View */}
         <div className='p-2 sm:hidden'>
           <div className="flex flex-col items-center justify-start">
@@ -222,7 +222,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       <div className='overflow-hidden'>
         <div className="flex ml-[20vw] lg:ml-[36.5vw]">
@@ -250,7 +250,7 @@ export default function Home() {
           <Block color='bg-[#FEC05C]/20' />
           <Block color='bg-[#D12510]/20' />
         </div>
-      </div>
+      </div>;
 
       {/* Panel section */}
       <div className="relative bg-brand-bg px-0 sm:px-5 2xl:px-0 w-screen">

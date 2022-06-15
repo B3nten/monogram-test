@@ -5,9 +5,10 @@ import { Model } from './Model';
 
 
 export default function Three() {
+    const scrollbarWidth = window.innerWidth - document.body.clientWidth;
 
     return (
-        <div className='mx-auto w-full max-w-[914px] aspect-square'>
+        <div className={`mx-auto max-w-[914px] aspect-square`} style={{ width: `calc(100vw - ${scrollbarWidth}px` }}>
             <Canvas>
                 <Suspense fallback={null}>
                     <Model />
@@ -15,6 +16,7 @@ export default function Three() {
                 <OrbitControls
                     enablePan={false}
                     enableZoom={false}
+                    enableRotate={false}
                     rotateSpeed={.1}
                     mouseButtons={{ LEFT: null }}
                     maxPolarAngle={1.7}
