@@ -13,12 +13,14 @@ export function Circle({ delay = 0 }: { delay: number; }) {
                     clearInterval(interval);
                     return c;
                 }
-                return c = c + 1;
+                if (animate) {
+                    return c + 1;
+                }
+                return 0;
             });
         }, 6);
-
         return () => clearInterval(interval);
-    }, []);
+    }, [animate]);
     return (
         <div className="relative inline-block" ref={ref}>
             <div className='text-4xl md:text-5xl lg:text-6xl text-[#EFFFE2] font-bold absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 drop-shadow-circle'>
