@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Inter']
+				sans: ['Inter', 'ui-sans-serif', 'system-ui']
 			},
 			screens: {
 				'2xl': '1512px'
@@ -39,4 +39,4 @@ module.exports = {
 		}
 	},
 	plugins: []
-}
+};
