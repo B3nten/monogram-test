@@ -67,7 +67,7 @@ export function Markup() {
 					<div>
 						<p
 							ref={markupText}
-							className="mt-5 max-w-md text-sm text-[#414141] sm:max-w-[549px] sm:text-base md:ml-[8vw] lg:text-lg 2xl:ml-32 2xl:text-2xl"
+							className="mt-5 max-w-md text-sm text-[#414141] sm:max-w-[480px] sm:text-base md:ml-[8vw] lg:text-lg 2xl:ml-32 2xl:text-2xl"
 						>
 							When ready for deployment, a static-site generator such as Astro or Next.js is used to
 							compile the website. The end result is a collection of pre-rendered HTML pages that
