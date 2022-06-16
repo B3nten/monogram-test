@@ -26,3 +26,8 @@ body {
 .blockAnimation {
 	@apply !rotate-0 !opacity-100;
 }
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
