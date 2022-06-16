@@ -113,7 +113,7 @@ export function Markup() {
 					</div>
 				</div>
 			</div>
-			;{/* Mobile View */}
+			{/* Mobile View */}
 			<div className="p-2 sm:hidden">
 				<div className="flex flex-col items-center justify-start">
 					<h1
