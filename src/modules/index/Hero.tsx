@@ -39,8 +39,8 @@ export function Hero() {
 						</div>
 						{/* Blur, hidden on platforms that don't support backdrop blur */}
 						<div className="ml-[10vw] flex space-x-[2.5vw] opacity-0 2xl:ml-40 2xl:space-x-[40px] [@supports(backdrop-filter:blur(0))]:opacity-100">
-							<div className="mt-[-20vw] h-[32vw] w-[18vw] shrink-0 rounded-[5vw] bg-white/30 backdrop-blur-2xl 2xl:mt-[-300px] 2xl:h-[479px] 2xl:w-[280px] 2xl:rounded-[68px]" />
-							<div className="mt-[-33vw] h-[44vw] w-[18vw] shrink-0 rounded-[5vw] bg-white/30 backdrop-blur-2xl 2xl:mt-[-500px] 2xl:h-[662px] 2xl:w-[280px] 2xl:rounded-[68px]" />
+							<div className="blurrycard mt-[-20vw] h-[32vw] 2xl:mt-[-300px] 2xl:h-[479px]" />
+							<div className="blurrycard mt-[-33vw] h-[44vw] 2xl:mt-[-500px] 2xl:h-[662px]" />
 						</div>
 					</div>
 					<img

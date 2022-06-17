@@ -16,7 +16,7 @@ body {
 }
 
 .in {
-	@apply  !translate-y-0 !opacity-100;
+	@apply !translate-y-0 !opacity-100;
 }
 
 .blockBase {
@@ -24,7 +24,11 @@ body {
 }
 
 .blockAnimation {
-	@apply  !rotate-0 !opacity-100;
+	@apply !rotate-0 !opacity-100;
+}
+
+.blurrycard {
+	@apply w-[18vw] shrink-0 rounded-[5vw] bg-white/50 backdrop-blur-[120px] 2xl:w-[280px] 2xl:rounded-[68px];
 }
 
 * {
