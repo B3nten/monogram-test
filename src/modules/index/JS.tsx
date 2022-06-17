@@ -15,6 +15,7 @@ export function JS() {
 				<img
 					className="absolute right-[9.5vw] top-[10.5vw] hidden h-[30vw] w-[16vw] lg:block 2xl:right-36 2xl:top-40 2xl:h-auto 2xl:w-auto"
 					src="/assets/jsarrow.svg"
+					alt=""
 				/>
 				<h2
 					ref={jsHeader}

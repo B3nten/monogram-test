@@ -16,11 +16,11 @@ export function Circle({ delay = 0 }: { delay: number }) {
 				return
 			}
 			if (animate && counter.current) {
-				count.current++
+				count.current += 10
 				// directly mutate dom for performance, not sure if it helps much.
 				counter.current.innerText = count.current.toString()
 			}
-		}, 6)
+		}, 60)
 		// Cleanup
 		return () => clearInterval(interval)
 	}, [animate])

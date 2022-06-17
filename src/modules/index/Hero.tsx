@@ -2,7 +2,7 @@ export function Hero() {
 	return (
 		<section>
 			{/* Desktop */}
-			<div className="mt-10 hidden flex-col items-start p-1 sm:flex sm:px-4 md:mt-20 lg:mt-36 2xl:px-0">
+			<div className="mt-10 hidden flex-col items-start p-2 sm:flex sm:px-4 md:mt-20 lg:mt-36 2xl:px-0">
 				<h1 className="text-5xl font-black leading-[1.15] tracking-tight sm:text-8xl md:ml-[8vw] lg:text-[133px] 2xl:ml-32">
 					jamstack
 					<span className="bg-[url(/assets/text.webp)] bg-cover bg-clip-text bg-bottom text-transparent">
@@ -12,7 +12,7 @@ export function Hero() {
 				</h1>
 				<div className="mt-7 grid grid-cols-2 gap-4 lg:gap-8">
 					<div>
-						<p className="mt-5 max-w-md text-sm text-brand-gray sm:max-w-[549px] sm:text-base md:ml-[12vw] lg:text-lg 2xl:ml-44">
+						<p className="mt-5 max-w-md text-sm font-light text-brand-gray sm:max-w-[549px] sm:text-base md:ml-[12vw] lg:text-lg 2xl:ml-44">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt
 							proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui
 							vivamus sit.
@@ -51,7 +51,7 @@ export function Hero() {
 				</div>
 			</div>
 			{/* Mobile View */}
-			<div className="mt-10 h-screen p-2 sm:hidden">
+			<div className="mt-10 h-screen p-4 sm:hidden">
 				<div className="flex h-full flex-col items-center justify-start">
 					<h1 className="text-7xl font-black leading-[1.15] tracking-tight sm:text-8xl lg:text-[133px]">
 						jamstack
@@ -60,7 +60,7 @@ export function Hero() {
 						{' '}
 						101
 					</span>
-					<p className="mt-5 max-w-md text-sm text-brand-gray sm:max-w-[549px] sm:text-base md:ml-[12vw] lg:text-lg 2xl:ml-44">
+					<p className="sm:max-w-[549px]md:ml-[12vw] mt-5 max-w-md text-lg text-brand-gray lg:text-lg 2xl:ml-44">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt
 						proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus
 						sit.

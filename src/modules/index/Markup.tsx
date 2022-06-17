@@ -67,7 +67,7 @@ export function Markup() {
 					<div>
 						<p
 							ref={markupText}
-							className="mt-5 max-w-md text-sm text-[#414141] sm:max-w-[480px] sm:text-base md:ml-[8vw] lg:text-lg 2xl:ml-32 2xl:text-2xl"
+							className="mt-5 max-w-md text-sm !leading-[162%] text-[#414141] sm:max-w-[480px] sm:text-base md:ml-[8vw] lg:text-lg 2xl:ml-32 2xl:text-2xl"
 						>
 							When ready for deployment, a static-site generator such as Astro or Next.js is used to
 							compile the website. The end result is a collection of pre-rendered HTML pages that
@@ -114,7 +114,7 @@ export function Markup() {
 				</div>
 			</div>
 			{/* Mobile View */}
-			<div className="p-2 sm:hidden">
+			<div className="p-4 sm:hidden">
 				<div className="flex flex-col items-center justify-start">
 					<h2
 						ref={mobileMarkupHeader}
@@ -124,7 +124,7 @@ export function Markup() {
 					</h2>
 					<p
 						ref={mobileMarkupText}
-						className="mt-5 max-w-md text-center text-base text-brand-gray sm:max-w-[549px] sm:text-base md:ml-[12vw] lg:text-lg 2xl:ml-44"
+						className="mt-5 max-w-md text-center text-lg text-brand-gray sm:max-w-[549px] md:ml-[12vw] lg:text-lg 2xl:ml-44"
 					>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa, tincidunt
 						proin nunc viverra tristique tempor, ipsum. At lectus vel pretium tempor ut dui vivamus

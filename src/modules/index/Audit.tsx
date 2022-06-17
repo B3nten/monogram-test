@@ -49,8 +49,8 @@ export function Audit() {
 					</p>
 				</div>
 				{/* Footer */}
-				<div ref={footerText} className="relative mt-60 mb-48 space-y-5">
-					<p className="text-center text-2xl text-white">
+				<div ref={footerText} className="relative mt-60 mb-48 space-y-5 p-4 lg:space-y-[50px]">
+					<p className="text-center text-base font-light text-white sm:text-lg lg:text-2xl">
 						This is a design test by Benton Boychuk-Chorney for Monogram.
 					</p>
 					<img src="/assets/heart.svg" className="mx-auto animate-pulse" alt="Heart icon" />

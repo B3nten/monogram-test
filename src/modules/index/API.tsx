@@ -8,6 +8,7 @@ export function API() {
 	const gpu = useGPU()
 	const apiHeader = useAnimateIn()
 	const apiText = useAnimateIn()
+	console.log(gpu)
 
 	return (
 		<div className="relative  mt-[-15rem] w-full sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem]">
