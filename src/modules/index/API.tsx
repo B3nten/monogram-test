@@ -2,6 +2,7 @@ import { useAnimateIn } from '@src/common/hooks/useAnimateIn'
 import { useGPU } from '@src/common/hooks/useGPU'
 import { Ball } from './Ball'
 import { Parallax } from 'react-scroll-parallax'
+import { DisplayGrid } from './DisplayGrid'
 
 export function API() {
 	const gpu = useGPU()
@@ -12,12 +13,7 @@ export function API() {
 		<div className="relative  mt-[-15rem] w-full sm:mt-[-20rem] md:mt-[-28rem] lg:mt-[-32rem] xl:mt-[-38rem]">
 			{/* Display grid */}
 			<div className="absolute inset-0 -z-30 w-screen bg-brand-bg"></div>
-			<div className="absolute inset-0 -z-20 mx-auto  grid max-w-[1350px] grid-cols-2 px-4 sm:grid-cols-3 sm:px-10 lg:grid-cols-4">
-				<div className="dashes middle"></div>
-				<div className="dashes "></div>
-				<div className="dashes hidden sm:block"></div>
-				<div className="dashes hidden lg:block"></div>
-			</div>
+			<DisplayGrid className="-z-20" />
 			<section>
 				{/* Logo grid */}
 				{/* translate-z used to engage GPU - fixes pixelation on Safari */}

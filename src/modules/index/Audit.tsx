@@ -1,5 +1,6 @@
 import { useAnimateIn } from '@src/common/hooks/useAnimateIn'
 import { Circle } from './Circle'
+import { DisplayGrid } from './DisplayGrid'
 
 export function Audit() {
 	// Desktop or hybrid elements
@@ -10,12 +11,7 @@ export function Audit() {
 	return (
 		<div className="relative w-screen bg-brand-bg px-0 sm:px-5 2xl:px-0">
 			{/* Display grid */}
-			<div className="absolute inset-0 mx-auto grid max-w-[1350px] grid-cols-3 px-4 sm:px-10 lg:grid-cols-4">
-				<div className="border-l border-dashed border-white/30"></div>
-				<div className="border-x border-dashed border-white/30"></div>
-				<div className="border-r border-dashed border-white/30"></div>
-				<div className="hidden border-r border-dashed border-white/30 lg:block"></div>
-			</div>
+			<DisplayGrid />
 			<section className="flex -translate-y-10 flex-col items-center xl:-translate-y-[5.5rem]">
 				{/* Checks if backdrop-blur is possible, uses substitute gradient if not */}
 				<div
