@@ -1,21 +1,31 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import styles from './Circle.module.css'
 
-export function Circle({ delay = 0 }: { delay: number }) {
+export function Circle({ delay = 0, disabled = false }: { delay?: number; disabled?: boolean }) {
 	const [ref, animate] = useInView({ delay: delay, triggerOnce: true, threshold: 0.75 })
 	const count = useRef(0)
+	const [safari, setSafari] = useState(false)
 	const counter = useRef<HTMLDivElement | null>(null)
+
+	useEffect(() => {
+		if (
+			navigator.userAgent.indexOf('Safari') != -1 &&
+			navigator.userAgent.indexOf('Chrome') == -1
+		) {
+			setSafari(true)
+		}
+	}, [])
 
 	// Incrementer sets a ref and directly mutates the dom for performance reasons. Effect runs when animate = true
 	useEffect(() => {
 		const interval = setInterval(() => {
 			// check if count is finished, return
-			if (count.current > 99) {
+			if (count.current > 99 && !safari) {
 				clearInterval(interval)
 				return
 			}
-			if (animate && counter.current) {
+			if (animate && counter.current && !safari) {
 				count.current += 10
 				// directly mutate dom for performance, not sure if it helps much.
 				counter.current.innerText = count.current.toString()
@@ -23,7 +33,42 @@ export function Circle({ delay = 0 }: { delay: number }) {
 		}, 60)
 		// Cleanup
 		return () => clearInterval(interval)
-	}, [animate])
+	}, [animate, safari])
+
+	if (safari && disabled) {
+		return (
+			<div className="relative inline-block" ref={ref}>
+				{/* COUNTER COMPONENT */}
+				<div
+					ref={counter}
+					className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-4xl font-bold text-[#EFFFE2] drop-shadow-circle md:text-5xl lg:text-6xl"
+				>
+					100
+				</div>
+				{/* SVG */}
+				<img
+					src="/assets/circle_disabled.svg"
+					className="[transform:translateZ(0)_scale(1.25)]"
+				></img>
+			</div>
+		)
+	}
+
+	if (safari) {
+		return (
+			<div className="relative inline-block" ref={ref}>
+				{/* COUNTER COMPONENT */}
+				<div
+					ref={counter}
+					className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-4xl font-bold text-[#EFFFE2] drop-shadow-circle md:text-5xl lg:text-6xl"
+				>
+					100
+				</div>
+				{/* SVG */}
+				<img src="/assets/circle.svg" className="[transform:translateZ(0)_scale(1.25)]"></img>
+			</div>
+		)
+	}
 	return (
 		<div className="relative inline-block" ref={ref}>
 			{/* COUNTER COMPONENT */}

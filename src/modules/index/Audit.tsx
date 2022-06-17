@@ -27,7 +27,7 @@ export function Audit() {
 					<div className="mt-10 mb-16 grid grid-cols-2 sm:grid-cols-4 sm:gap-4 lg:mt-14 lg:mb-24">
 						<Circle delay={0} />
 						<Circle delay={0} />
-						<Circle delay={0} />
+						<Circle delay={0} disabled={true} />
 						<Circle delay={0} />
 					</div>
 					<p
