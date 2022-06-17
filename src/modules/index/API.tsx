@@ -126,9 +126,7 @@ export function API() {
 					<div className="relative mx-auto lg:px-0">
 						<div className="mx-auto aspect-square w-full max-w-[914px]">
 							{/* // Render ball loader if GPU is strong enough / not a mobile device  */}
-							{gpu.tier > 1 && <Ball />}
-							{/* Or else render the image */}
-							{gpu.tier < 2 && <img src="/assets/ball.webp" alt="" className="px-2" />}
+							{gpu.tier > 0 ? <Ball /> : <img src="/assets/ball.webp" alt="" className="px-2" />}
 						</div>
 						{/* Background glow effect */}
 						<div
