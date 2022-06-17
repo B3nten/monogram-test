@@ -32,8 +32,8 @@ export function Audit() {
 					</div>
 					<p
 						ref={panelText}
-						className="relative mx-auto mb-24 max-w-3xl bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text text-base font-bold text-transparent md:text-2xl
-            md:font-normal lg:mb-48 lg:text-[26px] lg:leading-10"
+						className="relative mx-auto mb-24 max-w-3xl bg-gradient-to-br from-[#c5ffc0] to-white/80 bg-clip-text text-base font-bold text-transparent
+            md:text-2xl md:font-normal lg:mb-48 lg:text-[26px] lg:leading-10"
 					>
 						Search engines, business stakeholders, and end-users gauge a website’s value using
 						metric tools like Google Lighthouse, which measures site performance, SEO, and
@@ -49,7 +49,7 @@ export function Audit() {
 					</p>
 				</div>
 				{/* Footer */}
-				<div ref={footerText} className="relative mt-60 mb-48 space-y-5 p-4 lg:space-y-[50px]">
+				<div ref={footerText} className="relative mt-56 mb-20 space-y-5 p-4 lg:space-y-[50px]">
 					<p className="text-center text-base font-light text-white sm:text-lg lg:text-2xl">
 						This is a design test by Benton Boychuk-Chorney for Monogram.
 					</p>
