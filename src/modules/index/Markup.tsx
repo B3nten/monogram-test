@@ -57,12 +57,12 @@ export function Markup() {
 	return (
 		<section>
 			<div className="mt-10 hidden flex-col items-start p-1 sm:flex sm:px-4 2xl:px-0">
-				<h1
+				<h2
 					ref={markupHeader}
 					className=" text-5xl font-black leading-[1.15] tracking-tight sm:text-8xl md:ml-[8vw] lg:text-[133px] 2xl:ml-32"
 				>
 					markup
-				</h1>
+				</h2>
 				<div className="mt-16 grid grid-cols-2 gap-4 lg:gap-8">
 					<div>
 						<p
@@ -116,12 +116,12 @@ export function Markup() {
 			{/* Mobile View */}
 			<div className="p-2 sm:hidden">
 				<div className="flex flex-col items-center justify-start">
-					<h1
+					<h2
 						ref={mobileMarkupHeader}
 						className="text-7xl font-black leading-[1.15] tracking-tight sm:text-8xl lg:text-[133px]"
 					>
 						markup
-					</h1>
+					</h2>
 					<p
 						ref={mobileMarkupText}
 						className="mt-5 max-w-md text-center text-base text-brand-gray sm:max-w-[549px] sm:text-base md:ml-[12vw] lg:text-lg 2xl:ml-44"

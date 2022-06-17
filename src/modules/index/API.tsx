@@ -13,10 +13,10 @@ export function API() {
 			{/* Display grid */}
 			<div className="absolute inset-0 -z-30 w-screen bg-brand-bg"></div>
 			<div className="absolute inset-0 -z-20 mx-auto  grid max-w-[1350px] grid-cols-2 px-4 sm:grid-cols-3 sm:px-10 lg:grid-cols-4">
-				<div className="border-l border-dashed border-white/30"></div>
-				<div className="border-x border-dashed border-white/30"></div>
-				<div className="hidden border-r border-dashed border-white/30 sm:block"></div>
-				<div className="hidden border-r border-dashed border-white/30 lg:block"></div>
+				<div className="dashes middle"></div>
+				<div className="dashes "></div>
+				<div className="dashes hidden sm:block"></div>
+				<div className="dashes hidden lg:block"></div>
 			</div>
 			<section>
 				{/* Logo grid */}
