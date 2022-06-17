@@ -31,11 +31,44 @@ export function JS() {
 					frameworks, such as Algolia and Next.js.
 				</p>
 				{/* Computer image */}
-				<img
-					className="relative z-10 w-[50vw] md:w-[60vw] xl:w-auto"
-					src="/assets/computer.webp"
-					alt="A computer with computer code displayed"
-				/>
+				<div className="relative">
+					<img
+						className="relative z-10 w-[50vw] md:w-[60vw] 2xl:h-[808px]  2xl:w-[810px]"
+						src="/assets/RetroComp.webp"
+						alt="A computer with computer code displayed."
+					/>
+					<div className="absolute inset-0 z-10" aria-disabled>
+						<code className="absolute left-[7.94vw] top-[6.88vw] font-code text-[.45vw] font-bold leading-[195%] text-[#44DBFF] sm:text-[.53vw] 2xl:left-[7.5rem] 2xl:top-[6.5rem] 2xl:text-[8.03px]">
+							<pre className="drop-shadow-code">
+								{`import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+class MyDocument extends Document {
+	render() {
+		return (
+			<Html lang="en">
+				<Head>
+					{/*Fonts*/}
+					<link rel="preconnect" href="https://rsms.me" crossOrigin="anonymous" />
+					<link rel="preconnect" href="https://kit.fontawesome.com" crossOrigin="anonymous" />
+					<link rel="preload" href="https://rsms.me/inter/inter.css" as="style" />
+					<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+					<noscript>
+						<link rel="stylesheet" type="text/css" href="https://rsms.me/inter/inter.css" />
+					</noscript>
+				</Head>
+				<body>
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		)
+	}
+}
+`}
+							</pre>
+						</code>
+					</div>
+				</div>
 			</div>
 		</section>
 	)
